@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import BookingsBox from "./BookingsBox";
 
 export default function Bookings() {
+  let [booking, setBooking] = useState([]);
+
+  let BookingsData = async () => {
+    let URL = "http://localhost:5000/api/practices";
+    let response = await axios.get(URL);
+    let { status, Practice } = response.data;
+    console.log(status);
+    console.log(Practice);
+    try {
+      if (status) {
+        setBooking([...Practice]);
+      } else {
+        alert("Please Enter Valid Choice");
+      }
+    } catch (error) {
+      alert(error);
+    }
+  };
+  useEffect(() => {
+    BookingsData();
+  }, []);
+
   return (
     <>
       <section className="text-gray-600 body-font">
@@ -14,366 +38,9 @@ export default function Bookings() {
             </p>
           </div>
           <div className="flex flex-wrap -m-4">
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow ">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/bank.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900  mb-3">
-                      Bankruptcy
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/civil.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Civil Rights
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/consti.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Constitutional
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/contract.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Contract
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/corporate.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Corporate
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/employ.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Employment
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/environment.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Environment
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/family.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Family
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/immigation1.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Immigration
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/Intellectual.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Alper Kamu
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/malpractise.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Malpractice
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/property.jpg"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Property
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/public.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Public
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/realestate.png"
-                  />
-
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Real Estate
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow ">
-              <a href="/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative ">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="img/tax1.png"
-                  />{" "}
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Tax
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
+            {booking.map((book) => {
+              return <BookingsBox book={book} key={book._id} />;
+            })}
           </div>
         </div>
       </section>

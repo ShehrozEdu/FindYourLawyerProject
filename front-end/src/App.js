@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 //Screens
-import HomeScreen from "./Screens/HomeScreen";
+import HomeScreen from "./components/Home/HomeScreen";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Bookings from "./components/Bookings";
@@ -26,7 +26,6 @@ function App() {
           <Route path={"/books"} element={<Books />} />
           <Route path={"/bookyourlawyer"} element={<AddNewCategory />} />
           {/* <Route path={"/blogs"} element={<Blog />} /> */}
-         
         </Routes>
       </>
     </Router>

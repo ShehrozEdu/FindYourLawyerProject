@@ -4,12 +4,12 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const UserRouter = require("./app/Routes/Userrouter");
 const PostRouter = require("./app/Routes/PostRouter");
+const OtherRouters = require("./app/Routes/OtherRouters");
 
 const {
   errorHandler,
   notFound,
 } = require("./app/middleware/error/ErrorHandling");
-const OtherRouters = require("./app/Routes/OtherRouters");
 
 const app = express();
 

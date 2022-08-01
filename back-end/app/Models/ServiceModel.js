@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const practiceSchema = new Schema({
+const ServicesSchema = new Schema({
   title: {
     type: String,
     required: [true, "Title is required"],
@@ -9,7 +9,7 @@ const practiceSchema = new Schema({
 
   subtitle: {
     type: String,
-    required: [true, "Subtitle is required"],
+    required: [true, "subtitle is required"],
   },
   description: {
     type: String,
@@ -17,9 +17,13 @@ const practiceSchema = new Schema({
   },
   image: {
     type: String,
+    required: [true, "image is required"],
+  },
+  services_no: {
+    type: Number,
   },
 });
 
-const Books = mongoose.model("Practice", practiceSchema);
+const Services = mongoose.model("Service", ServicesSchema);
 
-module.exports = Books;
+module.exports = Services;

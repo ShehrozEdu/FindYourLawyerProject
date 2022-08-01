@@ -1,8 +1,5 @@
 import React from "react";
-// import tata from "../img/tata.png";
-// import amazon from "../img/amazon.png";
-// import tesla from "../img/tesla.png";
-// import icici from "../img/icici.png";
+
 export default function TrustedPartners() {
   return (
     <>
