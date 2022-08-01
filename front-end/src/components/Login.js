@@ -120,7 +120,7 @@ const Login = () => {
               <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
                 Don't have an account ?{" "}
                 <Link
-                  to="img/signup"
+                  to="/signup"
                   className="cursor-pointer text-indigo-600 hover:text-indigo-800"
                 >
                   Sign up
@@ -131,7 +131,7 @@ const Login = () => {
         </div>
         <div className="flex-1 bg-gray-200 text-center hidden lg:flex">
           <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
-            <img src="/login-img.jpg" alt="" />
+            <img src="img/login-img.jpg" alt="" />
           </div>
         </div>
       </div>

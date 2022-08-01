@@ -3,7 +3,7 @@ import React from "react";
 // import blog from "../img/blog.jpg";
 // import books from "../img/books.jpg";
 import { Link } from "react-router-dom";
-
+import SetDarkMode from "../hooks/setDarkMode";
 export default function Services() {
   return (
     <section className="text-gray-600 body-font color2 " id="services">

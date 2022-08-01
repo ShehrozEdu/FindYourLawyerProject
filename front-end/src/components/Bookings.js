@@ -15,12 +15,12 @@ export default function Bookings() {
           </div>
           <div className="flex flex-wrap -m-4">
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow ">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/bank.png"
+                    src="img/bank.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -39,12 +39,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/civil.png"
+                    src="img/civil.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -63,12 +63,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/consti.png"
+                    src="img/consti.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -87,12 +87,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/contract.png"
+                    src="img/contract.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -111,12 +111,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/corporate.png"
+                    src="img/corporate.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -135,12 +135,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/employ.png"
+                    src="img/employ.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -159,12 +159,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/environment.png"
+                    src="img/environment.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -183,12 +183,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/family.png"
+                    src="img/family.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -207,12 +207,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/immigation1.png"
+                    src="img/immigation1.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -231,12 +231,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/Intellectual.png"
+                    src="img/Intellectual.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -254,37 +254,14 @@ export default function Bookings() {
                 </div>
               </a>
             </div>
-            <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
-                <div className="flex relative">
-                  <img
-                    alt="gallery"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/labor.png"
-                  />
 
-                  <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                    <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                      Hire the best Lawyers in this section!
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                      Alper Kamu
-                    </h1>
-                    <p className="leading-relaxed">
-                      Put forward your problem with the expertise and get
-                      instant solutions <br /> with satisfactory results
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/malpractise.png"
+                    src="img/malpractise.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -303,12 +280,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/property.jpg"
+                    src="img/property.jpg"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -327,12 +304,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/public.png"
+                    src="img/public.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -351,12 +328,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/realestate.png"
+                    src="img/realestate.png"
                   />
 
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
@@ -375,12 +352,12 @@ export default function Bookings() {
               </a>
             </div>
             <div className="lg:w-1/3 sm:w-1/2 p-4 shadow ">
-              <a href="img/bookyourlawyer" className="cursor-pointer">
+              <a href="/bookyourlawyer" className="cursor-pointer">
                 <div className="flex relative ">
                   <img
                     alt="gallery"
                     className="absolute inset-0 w-full h-full object-cover object-center"
-                    src="/tax1.png"
+                    src="img/tax1.png"
                   />{" "}
                   <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
                     <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">

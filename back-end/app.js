@@ -4,10 +4,12 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const UserRouter = require("./app/Routes/Userrouter");
 const PostRouter = require("./app/Routes/PostRouter");
+
 const {
   errorHandler,
   notFound,
 } = require("./app/middleware/error/ErrorHandling");
+const OtherRouters = require("./app/Routes/OtherRouters");
 
 const app = express();
 
@@ -23,6 +25,9 @@ app.use("/api/users", UserRouter);
 
 //post Router
 app.use("/api/posts", PostRouter);
+
+//other Router
+app.use("/api", OtherRouters);
 
 //Err Handler
 app.use(errorHandler);

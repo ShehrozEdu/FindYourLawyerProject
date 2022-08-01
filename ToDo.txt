@@ -11,12 +11,11 @@ NodeJS- API for:-
 		Register(done)
 		Contact Us
 		BookYourLawyer Forum
-		Judicial News Fetching Api
+		Judicial News Fetching Api(get)
 		
-MongoDb:-
-	Lawyers Data
+MongoDb:
 	Clients Data
-	Blogs(LAWYERS and ADMIN)
+	Blogs(LAWYERS and CRUD)
 	Books updating(ADMIN)
 			
 Additional:-
