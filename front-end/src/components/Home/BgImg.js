@@ -1,5 +1,4 @@
-  import React from "react";
-
+import React from "react";
 
 export default function BgImg() {
   return (
@@ -17,18 +16,17 @@ export default function BgImg() {
                     className=" lg:text-4xl md:text-2xl sm:text-2xl mb-5 text textP leading-6 font-bold text-white mt-2"
                     id="modal-title"
                   >
-                    "Find Your Lawyer"
+                    Get the best consultation
                   </h3>
                   <div className="mt-2">
-                    <q className="leading-relaxed p-5 font-medium text-2xl text-white textP">
-                      Get the best consultation advice for your problems at just
-                      a minimal cost,
+                    <p className="leading-relaxed p-5 font-medium text-2xl text-white textP">
+                      advice for your problems at just a minimal cost,
                       <br />
-                      <strong className="">Anywhere from the globe! </strong>
+                      <strong className="">anywhere from the globe! </strong>
                       <br />
                       <br />
                       We provide the best solutions to your legal problems.
-                    </q>
+                    </p>
                   </div>
                 </div>
               </div>

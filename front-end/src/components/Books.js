@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BooksBox from "./BooksBox";
+import axios from "axios";
 
 export default function Books() {
+  let [boooks, setBoooks] = useState([]);
+
+  let BooksData = async () => {
+    let URL = "http://localhost:5000/api/books";
+    let response = await axios.get(URL);
+    let { status, books } = response.data;
+
+    try {
+      if (status) {
+        setBoooks([...books]);
+      } else {
+        alert("Not able to load books");
+      }
+    } catch (error) {
+      alert(error);
+    }
+  };
+  useEffect(() => {
+    BooksData();
+  }, []);
   return (
     <>
       <section className="text-gray-600 body-font">
@@ -16,7 +37,7 @@ export default function Books() {
             </p>
           </div>
           <div className="flex flex-wrap -m-4">
-            {boooks.map(() => {
+            {boooks.map((books) => {
               return <BooksBox books={books} key={books._id} />;
             })}
           </div>

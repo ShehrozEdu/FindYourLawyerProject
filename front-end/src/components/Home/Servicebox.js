@@ -4,7 +4,25 @@ export default function ServiceBox(props) {
   let { service } = props;
   return (
     <>
-      <div className="lg:w-1/3 sm:w-1/2 p-4 ">
+      <div className="container flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mr-16">
+          <img
+            className="object-cover object-center rounded"
+            alt="hero"
+            src={service.image}
+          />
+        </div>
+        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-2 items-center text-center">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-rose-900">
+            {service.title}
+          </h1>
+          <p className="mb-8 text-stone-600 leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+      </div>
+
+      {/* <div className="lg:w-1/3 sm:w-1/2 p-4 ">
         <Link to="#">
           <div className="flex relative">
             <img
@@ -23,7 +41,7 @@ export default function ServiceBox(props) {
             </div>
           </div>{" "}
         </Link>
-      </div>
+      </div> */}
     </>
   );
 }

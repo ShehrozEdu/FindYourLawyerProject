@@ -33,11 +33,11 @@ export default function Services() {
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">We Offer</p>
         </div>
-        <div className="flex flex-wrap -m-4 ">
+        <section className="text-gray-600 body-font">
           {ser.map((service) => {
             return <ServiceBox service={service} key={service._id} />;
           })}
-        </div>
+        </section>
       </div>
     </section>
   );
