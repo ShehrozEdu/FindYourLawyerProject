@@ -28,7 +28,7 @@ export default function Testimonials() {
       <section className="text-gray-600 body-font color5">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="text-3xl lg:text-5xl font-bold title-font mb-4 text-slate-600 underline decoration-indigo-300 text">
+            <h1 className="text-3xl lg:text-5xl font-bold title-font mb-4 text-slate-600 underline  Crimson">
               Testimonials
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">

@@ -13,10 +13,10 @@ export default function ServiceBox(props) {
           />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-2 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-rose-900">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-rose-900 hex">
             {service.title}
           </h1>
-          <p className="mb-8 text-stone-600 leading-relaxed">
+          <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson">
             {service.description}
           </p>
         </div>

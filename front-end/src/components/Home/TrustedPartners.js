@@ -6,7 +6,7 @@ export default function TrustedPartners() {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="text-3xl lg:text-5xl font-bold underline decoration-indigo-300 title-font mb-4 text-slate-600 text">
+            <h1 className="text-3xl lg:text-5xl font-bold underline  title-font mb-4 text-slate-600 Crimson">
               Our Partners
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">

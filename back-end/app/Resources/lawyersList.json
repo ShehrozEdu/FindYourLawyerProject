@@ -1,0 +1,216 @@
+[
+  {
+    "id": 1,
+    "name": "Adv Leanne Graham",
+    "email": "Sincere@april.biz",
+    "state": "Jammu&Kashmir",
+    "image": "/avatar/1",
+    "zipcode": "180002",
+    "phone": "1-770-736-8031 x56442",
+    "practice": "Criminal"
+  },
+  {
+    "id": 2,
+    "name": "Adv Ervin Howell",
+    "email": "Shanna@melissa.tv",
+    "state": "Delhi",
+    "image": "/avatar/2",
+    "zipcode": "90566-7771",
+    "phone": "010-692-6593 x09125",
+    "practice": "Real Estate"
+  },
+  {
+    "id": 3,
+    "name": "Adv Clementine Bauch",
+    "email": "Nathan@yesenia.net",
+    "state": "Himachal Pradesh",
+    "image": "/avatar/3",
+    "zipcode": "59590-4157",
+    "phone": "1-463-123-4447",
+    "practice": "Criminal"
+  },
+  {
+    "id": 4,
+    "name": "Adv Patricia Lebsack",
+    "email": "Julianne.OConner@kory.org",
+    "state": "Mumbai",
+    "image": "/avatar/4",
+    "zipcode": "53919-4257",
+
+    "phone": "493-170-9623 x156",
+    "practice": "Malpractice"
+  },
+  {
+    "id": 5,
+    "name": "Adv Chelsey Dietrich",
+    "email": "Lucio_Hettinger@annie.ca",
+    "state": "Karnataka",
+    "image": "/avatar/5",
+    "zipcode": "33263",
+    "phone": "(254)954-1289",
+    "practice": "Tax"
+  },
+  {
+    "id": 6,
+    "name": "Adv Mrs. Dennis Schulist",
+    "email": "Karley_Dach@jasper.info",
+    "state": "Norberto Crossing",
+    "image": "/avatar/6",
+    "city": "South Christy",
+    "zipcode": "23505-1337",
+    "phone": "1-477-935-8478 x6430",
+    "practice": "Family"
+  },
+  {
+    "id": 7,
+    "name": "Adv Kurtis Weissnat",
+    "email": "Telly.Hoeger@billy.biz",
+    "state": "Rex Trail",
+    "image": "/avatar/7",
+    "zipcode": "58804-1099",
+    "phone": "210.067.6132",
+    "practice": "Bankruptcy"
+  },
+  {
+    "id": 8,
+    "name": "Adv Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "state": "Ellsworth Summit",
+    "image": "/avatar/8",
+    "zipcode": "45169",
+    "phone": "586.493.6943 x140",
+    "practice": "Civil Rights"
+  },
+  {
+    "id": 9,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/9",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Constitutional"
+  },
+  {
+    "id": 10,
+    "name": "Adv Clementina DuBuque",
+    "email": "Rey.Padberg@karina.biz",
+    "state": "Kattie Turnpike",
+    "image": "/avatar/10",
+    "zipcode": "31428-2261",
+    "phone": "024-648-3804",
+    "practice": "Contract"
+  },
+  {
+    "id": 11,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/11",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Corporate"
+  },
+  {
+    "id": 12,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/12",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Corporate"
+  },
+  {
+    "id": 13,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/13",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Public"
+  },
+  {
+    "id": 14,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/14",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Property"
+  },
+  {
+    "id": 15,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/15",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Environment"
+  },
+  {
+    "id": 16,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/16",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Employment"
+  },
+  {
+    "id": 17,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/17",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Employment"
+  },
+  {
+    "id": 18,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/18",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Employment"
+  },
+  {
+    "id": 19,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/19",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Employment"
+  },
+  {
+    "id": 20,
+    "name": "Adv Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "state": "Dayna Park",
+    "image": "/avatar/20",
+    "zipcode": "76495-3109",
+    "phone": "(775)976-6794 x41206",
+    "practice": "Employment"
+  }
+]

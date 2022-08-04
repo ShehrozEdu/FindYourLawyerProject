@@ -26,12 +26,16 @@ export default function Services() {
   }, []);
   return (
     <section className="text-gray-600 body-font color2 " id="services">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
-          <h1 className=" text-3xl lg:text-5xl font-bold title-font mb-4 text-slate-600 underline decoration-indigo-300 text">
-            Our Other Services
-          </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">We Offer</p>
+      <div className="container px-5 py-17 mx-auto">
+        <div className="flex flex-wrap w-full mb-20">
+          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 className=" text-3xl lg:text-5xl font-bold underline title-font mb-2 text-slate-600 Crimson">
+              Our Other Services
+            </h1>
+          </div>
+          <p className="lg:w-1/2 w-full leading-relaxed text-gray-500 Crimson">
+            TO BE EDITED
+          </p>
         </div>
         <section className="text-gray-600 body-font">
           {ser.map((service) => {

@@ -13,10 +13,10 @@ export default function BgImg() {
               <div className="sm:flex sm:items-start border">
                 <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-center">
                   <h3
-                    className=" lg:text-4xl md:text-2xl sm:text-2xl mb-5 text textP leading-6 font-bold text-white mt-2"
+                    className=" lg:text-4xl md:text-2xl sm:text-2xl mb-5 text textP leading-6 font-bold text-white mt-2  text-3xl lg:text-5xl"
                     id="modal-title"
                   >
-                    Get the best consultation
+                    "Get the best consultation
                   </h3>
                   <div className="mt-2">
                     <p className="leading-relaxed p-5 font-medium text-2xl text-white textP">
@@ -25,7 +25,7 @@ export default function BgImg() {
                       <strong className="">anywhere from the globe! </strong>
                       <br />
                       <br />
-                      We provide the best solutions to your legal problems.
+                      We provide the best solutions to your legal problems."
                     </p>
                   </div>
                 </div>

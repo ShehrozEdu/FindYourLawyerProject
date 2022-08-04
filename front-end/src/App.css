@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   font-family: "Oswald", sans-serif;
   scroll-behavior: smooth;
 }
+
 .bg-img1 {
   display: flex;
   flex-direction: column;
@@ -18,9 +20,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.text {
-  font-family: "Fjalla One", sans-serif;
-  /* font-weight: bold; */
+.Crimson {
+  font-family: "Crimson Pro", serif;
+}
+.hex {
+  background-image: linear-gradient(to right, #ff9933, #ffffff, #138808);
 }
 .logo {
   width: 40px;

@@ -4,7 +4,7 @@ export default function ContactUs() {
   return (
     <>
       <div className="flex flex-col text-center w-full mb-10" id="contact">
-        <h1 className="text-3xl lg:text-5xl font-medium title-font mb-4 text-slate-600 mt-8 underline decoration-indigo-300 text">
+        <h1 className="text-3xl lg:text-5xl font-medium title-font mb-4 text-slate-600 mt-8 underline decoration-indigo-300 Crimson">
           Contact US
         </h1>
       </div>
