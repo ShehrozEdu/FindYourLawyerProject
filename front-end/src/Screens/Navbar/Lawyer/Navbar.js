@@ -69,7 +69,7 @@ export default function LawyerNavBar() {
                   <Link to="/">Home</Link>
                 </li>
                 <li className="text-gray-700 dark:text-white font-medium hover:text-indigo-600 dark:hover:text-yellow-300 ">
-                  <Link to="/myBookings">My Bookings</Link>
+                  <Link to="/mybookings">My Bookings</Link>
                 </li>
                 <li className="text-gray-700 dark:text-white font-medium hover:text-indigo-600 dark:hover:text-yellow-300 ">
                   <Link to="/blogs">Blogs</Link>

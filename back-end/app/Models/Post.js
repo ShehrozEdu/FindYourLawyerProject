@@ -9,11 +9,6 @@ const PostSchema = new Schema(
       required: [true, "Title is required"],
     },
 
-    category: {
-      type: String,
-      required: [true, "category is required"],
-    },
-
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "user",
