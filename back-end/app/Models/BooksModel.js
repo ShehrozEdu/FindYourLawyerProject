@@ -11,6 +11,12 @@ const BooksSchema = new Schema({
     type: String,
     required: [true, "Author is required"],
   },
+  image: {
+    type: String,
+  },
+  link: {
+    type: String,
+  },
 });
 
 const Books = mongoose.model("books", BooksSchema);

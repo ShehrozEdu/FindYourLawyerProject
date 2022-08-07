@@ -1,4 +1,4 @@
-import { createAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 //register action
@@ -20,34 +20,7 @@ export const registerUserAction = createAsyncThunk(
       );
       return data;
     } catch (error) {
-      if (!error?.response) {
-        throw error;
-      }
-      return rejectWithValue(error?.response?.data);
-    }
-  }
-);
-
-//Lawyer Signup
-
-export const registerLawyerAction = createAsyncThunk(
-  "lawyer/signup",
-  async (lawyer, { rejectWithValue, getState, dispatch }) => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    try {
-      //http call
-      const { data } = await axios.post(
-        "http://localhost:5000/api/users/lawyer-signup",
-        lawyer,
-        config
-      );
-      return data;
-    } catch (error) {
-      if (!error?.response) {
+      if (!error.response) {
         throw error;
       }
       return rejectWithValue(error?.response?.data);
@@ -92,22 +65,45 @@ const userLoginFromStorage = localStorage.getItem("userInfo")
 
 //LOGOUT
 export const logoutAction = createAsyncThunk(
-  "/user /logout",
+  "/user/logout",
   async (payload, { rejectWithValue, getState, getDispatch }) => {
     try {
       localStorage.removeItem("userInfo");
     } catch (error) {
       if (!error?.response) {
         throw error;
-      } else {
-        return rejectWithValue(error.response.data);
       }
+      return rejectWithValue(error?.response?.data);
     }
   }
 );
+
+//Fetch All Users
+export const fetchUsersAction = createAsyncThunk(
+  "user/list",
+  async (id, { rejectWithValue, getState, dispatch }) => {
+    //get user token
+    const user = getState()?.users;
+    const { userAuth } = user;
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userAuth?.token}`,
+      },
+    };
+    try {
+      let URL = "http://localhost:5000/api/users/";
+      const { data } = await axios.get(URL, config);
+      return data;
+    } catch (error) {
+      if (!error?.response) throw error;
+      return rejectWithValue(error?.response?.data);
+    }
+  }
+);
+
 //Slices
 const userSlices = createSlice({
-  name: " user",
+  name: "user",
   initialState: {
     userAuth: userLoginFromStorage,
   },
@@ -132,25 +128,6 @@ const userSlices = createSlice({
       state.serverErr = action?.error?.message;
     });
 
-    //For Lawyer Registration
-
-    builder.addCase(registerLawyerAction.pending, (state, action) => {
-      state.loading = true;
-      state.appErr = undefined;
-      state.serverErr = undefined;
-    });
-    builder.addCase(registerLawyerAction.fulfilled, (state, action) => {
-      state.loading = false;
-      state.registered = action?.payload?.message;
-      state.appErr = undefined;
-      state.serverErr = undefined;
-    });
-    builder.addCase(registerLawyerAction.rejected, (state, action) => {
-      state.loading = false;
-      state.appErr = action?.payload?.message;
-      state.serverErr = action?.error?.message;
-    });
-
     //for Login
 
     builder.addCase(loginUserAction.pending, (state, action) => {
@@ -165,6 +142,25 @@ const userSlices = createSlice({
       state.serverErr = undefined;
     });
     builder.addCase(loginUserAction.rejected, (state, action) => {
+      state.loading = false;
+      state.appErr = action?.payload?.message;
+      state.serverErr = action?.error?.message;
+    });
+
+    //for All USers
+    builder.addCase(fetchUsersAction.pending, (state, action) => {
+      state.loading = true;
+      state.appErr = undefined;
+      state.serverErr = undefined;
+    });
+    builder.addCase(fetchUsersAction.fulfilled, (state, action) => {
+      state.loading = false;
+      state.usersList = action?.payload;
+      state.appErr = undefined;
+      state.serverErr = undefined;
+    });
+    builder.addCase(fetchUsersAction.rejected, (state, action) => {
+      console.log(action.payload);
       state.loading = false;
       state.appErr = action?.payload?.message;
       state.serverErr = action?.error?.message;

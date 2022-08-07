@@ -32,7 +32,8 @@ export default function Testimonials() {
               Testimonials
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Best Ratings!
+              We have been rated by the{" "}
+              <strong> Worlds top notch personalities </strong>
             </p>
           </div>
           <div className="flex flex-wrap -m-4  ">

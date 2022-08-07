@@ -14,6 +14,7 @@ import AddNewCategory from "./components/Categories/AddNewCategory";
 import MyBookings from "./components/MyBookings";
 import LawyerRoute from "./Screens/Navbar/ProtectedRoutes/LawyerRoute";
 import CreatePost from "./components/BlogCRUD/CreatePost";
+import IPC from "./components/IPCs and CRPCs/IPC";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path={"/mybookings"} element={<MyBookings />} />
           </Route>
           <Route path={"/posts"} element={<CreatePost />} />
+          <Route path={"/IPC"} element={<IPC />} />
         </Routes>
       </>
     </Router>

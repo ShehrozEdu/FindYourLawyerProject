@@ -6,6 +6,7 @@ import * as Yup from "yup";
 //Slice
 
 import { loginUserAction } from "../redux/slices/userSlice";
+import Footer from "./Home/Footer";
 
 //imgs
 
@@ -31,7 +32,7 @@ const Login = () => {
 
       dispatch(loginUserAction(values));
 
-      console.log(values);
+      // console.log(values);
     },
     validationSchema: formSchema,
   });
@@ -40,7 +41,7 @@ const Login = () => {
 
   const store = useSelector((state) => state?.users);
   const { userAuth, loading, serverErr, appErr } = store;
-  if (userAuth) return <Navigate to="/" />;
+  if (userAuth) return <Navigate to="/bookings" />;
   return (
     <>
       <div className="lg:flex">
@@ -48,8 +49,8 @@ const Login = () => {
           <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12"></div>
           <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
             <h2
-              className="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
-                    xl:text-bold underline decoration-indigo-300"
+              className="text-center text-4xl text-gray-500 font-display font-semibold lg:text-left xl:text-5xl
+                    xl:text-bold underline Crimson "
             >
               Sign in
             </h2>
@@ -85,14 +86,14 @@ const Login = () => {
                     <div className="text-sm font-bold text-gray-700 tracking-wide">
                       Password
                     </div>
-                    <div>
+                    {/* <div>
                       <a
                         className="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
                                         cursor-pointer"
                       >
                         Forgot Password?
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                   <input
                     value={formik.values.Password}
@@ -109,8 +110,8 @@ const Login = () => {
                 <div className="mt-10">
                   <button
                     type="submit"
-                    className="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide
-                                font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
+                    className="bg-slate-500 text-stone-300 p-4 w-full rounded-full tracking-wide
+                                font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-slate-600
                                 shadow-lg"
                   >
                     Log In
@@ -121,7 +122,7 @@ const Login = () => {
                 Don't have an account ?{" "}
                 <Link
                   to="/signup"
-                  className="cursor-pointer text-indigo-600 hover:text-indigo-800"
+                  className="cursor-pointer text-amber-600 hover:text-amber-800"
                 >
                   Sign up
                 </Link>
@@ -135,6 +136,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

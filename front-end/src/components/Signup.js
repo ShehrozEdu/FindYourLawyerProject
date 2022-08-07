@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { Navigate } from "react-router-dom";
 
 import { registerUserAction } from "../redux/slices/userSlice";
-
+import Footer from "./Home/Footer";
 
 //FormSchema
 const formSchema = Yup.object({
@@ -14,7 +14,7 @@ const formSchema = Yup.object({
   LastName: Yup.string().required("Last Name is required"),
   Email: Yup.string().required("Email is required"),
   Password: Yup.string().required("Password is required"),
-  ContactNo: Yup.number().required("Number is required").positive().integer(),
+  // ContactNo: Yup.number().required("Number is required").positive().integer(),
 });
 export default function Signup() {
   const dispatch = useDispatch();
@@ -24,24 +24,23 @@ export default function Signup() {
       LastName: "",
       Email: "",
       Password: "",
-      ContactNo: "",
+      // ContactNo: "",
     },
     onSubmit: (values) => {
       //dispath the action
       dispatch(registerUserAction(values));
-
       console.log(values);
     },
     validationSchema: formSchema,
   });
   //State collection from Store
-  const storeData = useSelector((store) => store.users);
+  const storeData = useSelector((store) => store?.users);
   const { serverErr, appErr, registered } = storeData;
   console.log(storeData);
 
   //Redirecting after Signup
   if (registered) {
-    <Navigate to="/bookings" />;
+    return <Navigate to="/bookings" />;
   }
   return (
     <>
@@ -52,8 +51,8 @@ export default function Signup() {
         <div className="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1">
           <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
             <div className="mt-12 flex flex-col items-center">
-              <h1 className="text-3xl xl:text-4xl font-extrabold text-indigo-600 underline decoration-indigo-300">
-                Sign up for the access
+              <h1 className="text-3xl xl:text-4xl font-extrabold text-gray-600 underline  Crimson">
+                Sign upto begin
                 {appErr || serverErr ? (
                   <div className="text-red-300 text-center">
                     {(serverErr, appErr)}
@@ -149,7 +148,7 @@ export default function Signup() {
                     <div className="text-red-400 mb-2">
                       {formik.touched.Password && formik.errors.Password}
                     </div>
-                    <input
+                    {/* <input
                       value={formik.values.ContactNo}
                       onChange={formik.handleChange("ContactNo")}
                       onBlur={formik.handleBlur("ContactNo")}
@@ -159,10 +158,10 @@ export default function Signup() {
                     />{" "}
                     <div className="text-red-400 mb-2">
                       {formik.touched.ContactNo && formik.errors.ContactNo}
-                    </div>
+                    </div> */}
                     <button
                       type="submit"
-                      className="mt-5 tracking-wide font-semibold btnSumbit bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                      className="mt-5 tracking-wide font-semibold btnSumbit bg-slate-200 text-stone-600 w-full py-4 rounded-lg hover:bg-slate-400 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none shadow-lg"
                     >
                       <svg
                         className="w-6 h-6 -ml-2"
@@ -176,11 +175,11 @@ export default function Signup() {
                         <circle cx="8.5" cy="7" r="4" />
                         <path d="M20 8v6M23 11h-6" />
                       </svg>
-                      <span  className="ml-3">Sign Up</span>
+                      <span className="ml-3">Sign Up</span>
                     </button>
                   </form>
                   <p className="mt-6 text-xs text-gray-600 text-center">
-                    I agree to abide by 
+                    I agree to abide by
                     <Link
                       to="https://www.termsandcondiitionssample.com/live.php?token=RB3m6eqZvXmSK9KyeB0ovYOHcvZMhycl"
                       className="border-b border-gray-500 border-dotted"
@@ -195,15 +194,6 @@ export default function Signup() {
                       Privacy Policy
                     </Link>
                   </p>
-                  <p className="mt-6 text-xs text-gray-600 text-center">
-                    Are you a Lawyer?
-                    <Link
-                      to="/signup/lawyer"
-                      className="border-b border-gray-500 border-dotted text-rose-900"
-                    >
-                      Click here
-                    </Link>
-                  </p>
                 </div>
               </div>
             </div>
@@ -215,6 +205,7 @@ export default function Signup() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

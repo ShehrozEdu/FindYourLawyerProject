@@ -18,7 +18,7 @@ const UserController = {
         LastName: data.LastName ? data.LastName : undefined,
         Email: data.Email,
         Password: hashPassword,
-        ContactNo: data.ContactNo,
+        // ContactNo: data.ContactNo,
       });
 
       // check if there is an existing email

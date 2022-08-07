@@ -7,12 +7,12 @@ export default function TrustedPartners() {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
             <h1 className="text-3xl lg:text-5xl font-bold underline  title-font mb-4 text-slate-600 Crimson">
-              Our Partners
+              <i class="bx bxs-face d-flex align-middle me-3"></i> Our Partners
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-              gentrify, subway tile poke farm-to-table. Franzen you probably
-              haven't heard of them.
+              We have partnered with Top companies around the globe to give you
+              the best results for your issues and{" "}
+              <strong>we are proud to have their trust in us.</strong>
             </p>
           </div>
           <div className="flex flex-wrap -m-4 ">

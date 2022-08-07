@@ -17,10 +17,10 @@ const UsersSchema = new Schema(
       type: String,
       required: true,
     },
-    ContactNo: {
-      type: Number,
-      required: true,
-    },
+    // ContactNo: {
+    //   type: Number,
+    //   required: true,
+    // },
     isLawyer: {
       type: Boolean,
       default: false,

@@ -9,8 +9,8 @@ export default function Bookings() {
     let URL = "http://localhost:5000/api/practices";
     let response = await axios.get(URL);
     let { status, Practice } = response.data;
-    console.log(status);
-    console.log(Practice);
+    // console.log(status);
+    // console.log(Practice);
     try {
       if (status) {
         setBooking([...Practice]);
@@ -30,7 +30,7 @@ export default function Bookings() {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-indigo-600 underline decoration-indigo-300 Crimson">
+            <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-gray-600 underline Crimson">
               Book according to the need!
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base text">

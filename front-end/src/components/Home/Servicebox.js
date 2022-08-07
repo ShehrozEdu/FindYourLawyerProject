@@ -1,11 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function ServiceBox(props) {
+  let NavigateLink = () => {
+    let Navigate = useNavigate();
+    Navigate("/books/");
+  };
   let { service } = props;
   return (
     <>
       <div className="container flex px-5 py-24 md:flex-row flex-col items-center">
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mr-16">
+        <div className="lg:max-w-lg lg:w-full md:w-1/3 w-5/4 lg:mr-16 mr-4">
           <img
             className="object-cover object-center rounded"
             alt="hero"
@@ -13,7 +18,10 @@ export default function ServiceBox(props) {
           />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-2 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-rose-900 hex">
+          <h1
+            className="title-font sm:text-3xl text-4xl mb-4 font-bold text-rose-900 hex cursor-pointer"
+            onClick={NavigateLink}
+          >
             {service.title}
           </h1>
           <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson">

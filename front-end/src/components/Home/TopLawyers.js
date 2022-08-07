@@ -7,8 +7,9 @@ export default function TopLawyers() {
         <div className="container px-4 py-24 mx-auto">
           <div className="flex flex-wrap w-full mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 className=" text-3xl lg:text-5xl font-bold underline title-font mb-2 text-slate-600 Crimson">
+              <h1 className=" text-3xl lg:text-5xl font-bold underline title-font mb-2 text-slate-600 Crimson ">
                 Our Top Lawyers
+                <i class="bx bxs-to-top d-flex align-middle"></i>
               </h1>
             </div>
             <p className="lg:w-1/2 w-full leading-relaxed text-gray-500 Crimson">

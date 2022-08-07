@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Home/Footer";
 
 export default function AddNewCategory() {
   return (
@@ -6,7 +7,7 @@ export default function AddNewCategory() {
       <div className="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1">
         <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
           <div className="mt-12 flex flex-col items-center">
-            <h1 className="text-3xl mb-10 xl:text-4xl font-extrabold text-indigo-600 underline decoration-indigo-300">
+            <h1 className="text-3xl mb-10 xl:text-4xl font-extrabold text-gray-600 underline Crimson">
               Write to your Lawyer!
             </h1>
 
@@ -444,8 +445,8 @@ export default function AddNewCategory() {
                 </div>
                 <button
                   type="submit"
-                  className="bg-indigo-500 mt-5 text-gray-100 p-4 w-full rounded-full tracking-wide
-                                font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
+                  className="bg-neutral-500 mt-5 text-gray-500 p-4 w-full rounded-full tracking-wide
+                                font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-slate-400
                                 shadow-lg"
                 >
                   Submit
@@ -455,6 +456,7 @@ export default function AddNewCategory() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
