@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 
 export default function BookingsBox(props) {
   let { book } = props;
+
   return (
     <>
       <div className="lg:w-1/3 sm:w-1/2 p-4 shadow ">
-        <Link to="/bookyourlawyer" className="cursor-pointer">
+        <Link to="/lawyersList" className="cursor-pointer">
           <div className="flex relative">
             <img
               alt="gallery"

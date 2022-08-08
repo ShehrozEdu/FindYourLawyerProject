@@ -1,7 +1,30 @@
-import React from "react";
-import LawyerListBox from "./LawyerListBox";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import LawyersListBox from "./LawyerListBox";
 
 export default function LawyersList() {
+  let [lawyersList, setLawyersList] = useState([]);
+
+  let getLawyersList = async () => {
+    let URL = "http://localhost:5000/api/lawyersList";
+    let response = await axios.get(URL);
+    let { status, LawyersList } = response.data;
+    // console.log(status);
+    // console.log(Practice);
+    try {
+      if (status) {
+        setLawyersList([...LawyersList]);
+      } else {
+        alert("Cannot fetch Lawyers, please Refresh");
+      }
+    } catch (error) {
+      alert(error);
+    }
+  };
+  useEffect(() => {
+    getLawyersList();
+  }, []);
+
   return (
     <>
       <section className="text-gray-600 body-font">
@@ -22,7 +45,9 @@ export default function LawyersList() {
             </div>
           </div>
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            <LawyerListBox />
+            {lawyersList.map((list) => {
+              return <LawyersListBox list={list} key={list._id} />;
+            })}
           </div>
         </div>
       </section>

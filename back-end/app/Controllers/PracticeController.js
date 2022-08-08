@@ -35,6 +35,25 @@ const PracticeController = {
       });
     }
   }),
+
+  getLocationByPracticeName: async (req, res) => {
+    let { title } = req.query;
+    try {
+      let result = await PracticeModel.find({
+        title: { $regex: title + ".*", $options: "i" },
+      });
+      res.status(200).send({
+        status: true,
+        practice: result,
+      });
+    } catch (error) {
+      res.status(500).send({
+        status: false,
+        message: "server error",
+        error,
+      });
+    }
+  },
 };
 
 module.exports = PracticeController;
