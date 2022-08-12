@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 export default function ServiceBox(props) {
   let NavigateLink = () => {
     let Navigate = useNavigate();
-    Navigate("/books/");
+    Navigate("/books");
   };
-  let { service } = props;
+  // let { service } = props;
   return (
     <>
       <div className="container flex px-5 py-24 md:flex-row flex-col items-center">
@@ -14,7 +14,7 @@ export default function ServiceBox(props) {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src={service.image}
+            src="/img/IndianLaw.jpg"
           />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-2 items-center text-center">
@@ -22,14 +22,56 @@ export default function ServiceBox(props) {
             className="title-font sm:text-3xl text-4xl mb-4 font-bold text-rose-900 hex cursor-pointer"
             onClick={NavigateLink}
           >
-            {service.title}
+            IPCs and CRPCs
           </h1>
           <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson">
-            {service.description}
+            Read about the latest updates in the legal field and downloadable
+            IPC and CRC
           </p>
         </div>
       </div>
-
+      <div className="container flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-2 items-center text-center">
+          <h1
+            className="title-font sm:text-3xl text-4xl mb-4 font-bold text-rose-900 hex cursor-pointer"
+            onClick={NavigateLink}
+          >
+            BLOGS
+          </h1>
+          <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson">
+            Read the blogs by our working Professionals dedicated specifically
+            to recent updates
+          </p>
+        </div>{" "}
+        <div className="lg:max-w-lg lg:w-full md:w-1/3 w-5/4 lg:mr-16 mr-4">
+          <img
+            className="object-cover object-center rounded"
+            alt="hero"
+            src="/img/Blog.jpg"
+          />
+        </div>
+      </div>
+      <div className="container flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="lg:max-w-lg lg:w-full md:w-1/3 w-5/4 lg:mr-16 mr-4">
+          <img
+            className="object-cover object-center rounded"
+            alt="hero"
+            src="/img/Books.jpg"
+          />
+        </div>
+        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-2 items-center text-center">
+          <h1
+            className="title-font sm:text-3xl text-4xl mb-4 font-bold text-rose-900 hex cursor-pointer"
+            onClick={NavigateLink}
+          >
+            STUDENTS CORNER
+          </h1>
+          <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson">
+            Get access to the free knowledge and keep yourself updated with
+            current happenings!
+          </p>
+        </div>
+      </div>
       {/* <div className="lg:w-1/3 sm:w-1/2 p-4 ">
         <Link to="#">
           <div className="flex relative">

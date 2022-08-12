@@ -4,6 +4,7 @@ import LawyersListBox from "./LawyerListBox";
 
 export default function LawyersList() {
   let [lawyersList, setLawyersList] = useState([]);
+  let [sortLawyers, setSortLawyers] = useState([]);
 
   let getLawyersList = async () => {
     let URL = "http://localhost:5000/api/lawyersList";
@@ -29,25 +30,53 @@ export default function LawyersList() {
     <>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col">
-            <div className="h-1 bg-gray-200 rounded overflow-hidden">
-              <div className="w-24 h-full bg-indigo-500"></div>
-            </div>
-            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">
-                Space The Final Frontier
-              </h1>
-              <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
-                Street art subway tile salvia four dollar toast bitters selfies
-                quinoa yuccie synth meditation iPhone intelligentsia prism tofu.
-                Viral gochujang bitters dreamcatcher.
-              </p>
+          {/* <!-- SearchComponent --> */}
+          <div className="max-w-md mx-auto my-7 ">
+            <div className="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-slate-200 overflow-hidden">
+              <div className="grid place-items-center h-full w-12 text-gray-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+
+              <input
+                className="peer h-full w-full outline-none text-sm bg-slate-200 text-gray-700 pr-2"
+                type="text"
+                id="search"
+                placeholder="Search by city"
+                onChange={(event) => {
+                  setSortLawyers(event.target.value);
+                }}
+              />
             </div>
           </div>
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            {lawyersList.map((list) => {
-              return <LawyersListBox list={list} key={list._id} />;
-            })}
+            {lawyersList
+              .filter((list) => {
+                if (sortLawyers === "") {
+                  return list;
+                } else if (
+                  list.state
+                    .toLowerCase()
+                    .includes(sortLawyers.toString().toLowerCase())
+                ) {
+                  return list;
+                }
+              })
+              .map((list) => {
+                return <LawyersListBox list={list} key={list._id} />;
+              })}
           </div>
         </div>
       </section>

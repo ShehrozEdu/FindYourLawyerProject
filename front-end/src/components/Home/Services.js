@@ -1,29 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import ServiceBox from "./Servicebox";
 export default function Services() {
-  let [ser, setSer] = useState([]);
-
-  let servicesData = async () => {
-    let URL = "http://localhost:5000/api/services";
-
-    try {
-      let response = await axios.get(URL);
-      let { status, Services } = response.data;
-      // console.log(Services);
-      if (status) {
-        setSer([...Services]);
-      } else {
-        alert("Unknown Service detected");
-      }
-    } catch (error) {
-      alert(error);
-    }
-  };
-
-  useEffect(() => {
-    servicesData();
-  }, []);
   return (
     <section className="text-gray-600 body-font color2 " id="services">
       <div className="container px-5 py-17 mx-auto">
@@ -41,9 +18,7 @@ export default function Services() {
           </p>
         </div>
         <section className="text-gray-600 body-font">
-          {ser.map((service) => {
-            return <ServiceBox service={service} key={service._id} />;
-          })}
+          <ServiceBox />
         </section>
       </div>
     </section>

@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 export default function LawyerListBox({ list }) {
+  let NavigateLink = () => {
+    let Navigate = useNavigate();
+    Navigate("/bookyourlawyer");
+  };
   return (
     <>
       {" "}
@@ -8,17 +13,20 @@ export default function LawyerListBox({ list }) {
         <div className="rounded-lg h-64 overflow-hidden">
           <img
             alt="content"
-            className="object-cover object-center h-full w-full"
+            className="object-cover object-center h-full w-50"
             src={"/img" + list.image}
           />
         </div>
-        <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
+        <h2
+          className="text-xl font-medium title-font text-gray-900 mt-5 cursor-pointer"
+          onClick={NavigateLink}
+        >
           {list.name}
         </h2>
         <p className="text-base leading-relaxed mt-2">{list.state}</p>
-        <a className="text-indigo-500 inline-flex items-center mt-3">
+        <a className="text-stone-500 inline-flex items-center mt-3">
           {list.practice}
-          <svg
+          {/* <svg
             fill="none"
             stroke="currentColor"
             strokeLinecap="round"
@@ -28,7 +36,7 @@ export default function LawyerListBox({ list }) {
             viewBox="0 0 24 24"
           >
             <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
+          </svg> */}
         </a>
       </div>
     </>

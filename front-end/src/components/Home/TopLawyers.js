@@ -96,9 +96,7 @@ export default function TopLawyers() {
           </div>
         </div>
       </section>
-      <section>
-        <div class="container-fluid"></div>
-      </section>
+      <section></section>
     </>
   );
 }
