@@ -6,6 +6,7 @@ const TestimonialsController = require("../Controllers/TestimonialsController");
 const PracticeController = require("../Controllers/PracticeController");
 const NewsController = require("../Controllers/NewsController");
 const LawyersListController = require("../Controllers/LawyersListControllers");
+const ArticleController = require("../Controllers/ArticleController");
 
 //Books
 OtherRouters.post("/add-books", BooksController.addBooks);
@@ -34,5 +35,9 @@ OtherRouters.get("/news", NewsController.getNews);
 //LawyersList
 OtherRouters.post("/add-LawyersList", LawyersListController.addLawyersList);
 OtherRouters.get("/lawyersList", LawyersListController.getLawyersList);
+
+//article
+OtherRouters.post("/add-blogs", ArticleController.addArticle);
+OtherRouters.get("/blogs", ArticleController.getArticle);
 
 module.exports = OtherRouters;

@@ -22,7 +22,7 @@ export default function BgImg() {
                     <p className="leading-relaxed p-5 font-medium text-2xl text-white textP">
                       advice for your problems at just a minimal cost,
                       <br />
-                      <strong className="">anywhere from the globe! </strong>
+                      <strong className="">at just a minimal cost! </strong>
                       <br />
                       <br />
                       We provide the best solutions to your legal problems."
