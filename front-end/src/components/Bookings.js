@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BookingsBox from "./BookingsBox";
 
 export default function Bookings() {
   let [booking, setBooking] = useState([]);
   let [sort, setSort] = useState("");
-  // let PracticeRef = useRef();
 
   let BookingsData = async () => {
     let URL = "http://localhost:5000/api/practices";

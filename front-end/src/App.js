@@ -9,14 +9,15 @@ import Bookings from "./components/Bookings";
 import Books from "./components/Books";
 import Navbar from "./Screens/Navbar/Navbar";
 import AddNewCategory from "./components/Categories/AddNewCategory";
-import MyBookings from "./components/MyBookings";
+// import MyBookings from "./components/MyBookings";
 import LawyerRoute from "./Screens/Navbar/ProtectedRoutes/LawyerRoute";
 import CreatePost from "./components/BlogCRUD/CreatePost";
 import IPC from "./components/IPCs and CRPCs/IPC";
 import LawyersList from "./components/Lawyers/LawyersList";
 import Article from "./components/BlogCRUD/Article/Article";
 import Blog from "./components/BlogCRUD/Article/Blog";
-import Error from "./components/BlogCRUD/Article/Error";
+import Error from "./components/Error";
+import Pricing from "./components/Categories/Pricing";
 
 function App() {
   return (
@@ -32,15 +33,17 @@ function App() {
           <Route path={"/books"} element={<Books />} />
           <Route path={"/bookyourlawyer"} element={<AddNewCategory />} />
           <Route path={"/mybookings"} element={<LawyerRoute />}>
-            <Route path={"/mybookings"} element={<MyBookings />} />
+            {/* <Route path={"/mybookings"} element={<MyBookings />} /> */}
           </Route>
           <Route path={"/posts"} element={<CreatePost />} />
-          <Route path={"/IPC"} element={<IPC />} />
+          <Route path={"/services/IPC&CRPC"} element={<IPC />} />
           <Route path={"/lawyersList"} element={<LawyersList />} />
           {/* //blogs */}
           <Route path={"/blogs"} element={<Blog />} />
-
           <Route path={"/article/:name"} element={<Article />} />
+          {/* <Route path={"/pricing"} element={<Pricing />} /> */}
+        </Routes>
+        <Routes>
           <Route path={"*"} element={<Error />} />
         </Routes>
       </>

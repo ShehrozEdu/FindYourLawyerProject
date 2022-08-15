@@ -40,4 +40,6 @@ OtherRouters.get("/lawyersList", LawyersListController.getLawyersList);
 OtherRouters.post("/add-blogs", ArticleController.addArticle);
 OtherRouters.get("/blogs", ArticleController.getArticle);
 
+//CONTact
+
 module.exports = OtherRouters;

@@ -4,7 +4,7 @@ import articleContent from "./Article-content";
 
 //components
 import ArticleReuse from "./ArticleReuse";
-import Error from "./Error";
+import Error from "../../Error";
 
 export default function Article() {
   const { name } = useParams();

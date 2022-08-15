@@ -1,7 +1,15 @@
 import React from "react";
 import Footer from "../Home/Footer";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
+// import { Link } from "react-router-dom";
 
 export default function AddNewCategory() {
+  // let navigate = useNavigate();
+  // let navigateToPayment = () => {
+  //   navigate("/pricing");
+  // };
+
   return (
     <>
       <div className="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1">
@@ -444,7 +452,6 @@ export default function AddNewCategory() {
                   />
                 </div>
                 <button
-                  type="submit"
                   className="bg-neutral-500 mt-5 text-gray-500 p-4 w-full rounded-full tracking-wide
                                 font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-slate-400
                                 shadow-lg"

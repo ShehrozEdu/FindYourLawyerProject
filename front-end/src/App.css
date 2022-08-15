@@ -68,6 +68,11 @@
   opacity: (0.4);
 }
 
+.service__img {
+  width: 350px;
+  height: 250px;
+}
+
 .btnSubmit {
   background-color: bg-indigo-500 !important;
 }

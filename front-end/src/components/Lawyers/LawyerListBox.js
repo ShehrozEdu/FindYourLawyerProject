@@ -1,11 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function LawyerListBox({ list }) {
-  let NavigateLink = () => {
-    let Navigate = useNavigate();
-    Navigate("/bookyourlawyer");
-  };
+  // let NavigateLink = () => {
+  //   let navigate = useNavigate();
+  //   navigate("/bookyourlawyer");
+  // };
   return (
     <>
       {" "}
@@ -17,12 +17,14 @@ export default function LawyerListBox({ list }) {
             src={"/img" + list.image}
           />
         </div>
-        <h2
-          className="text-xl font-medium title-font text-gray-900 mt-5 cursor-pointer"
-          onClick={NavigateLink}
-        >
-          {list.name}
-        </h2>
+        <Link to="/bookyourlawyer" className="cursor-pointer">
+          <h2
+            className="text-xl font-medium title-font text-gray-900 mt-5 cursor-pointer"
+            // onClick={NavigateLink}
+          >
+            {list.name}
+          </h2>
+        </Link>
         <p className="text-base leading-relaxed mt-2">{list.state}</p>
         <a className="text-stone-500 inline-flex items-center mt-3">
           {list.practice}
