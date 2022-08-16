@@ -18,6 +18,23 @@ const PracticeController = {
       });
     }
   }),
+  getPracticeById: async function (req, res) {
+    try {
+      let { id } = req.params;
+      let result = await PracticeModel.findById(id);
+
+      res.status(200).send({
+        status: true,
+        Practice: result,
+      });
+    } catch (error) {
+      res.status(500).send({
+        status: false,
+        message: "server error",
+        error,
+      });
+    }
+  },
 
   addPractice: expressAsyncHandler(async function (req, res) {
     try {

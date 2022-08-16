@@ -7,69 +7,83 @@
     "image": "/avatar/1.jpg",
     "zipcode": "180002",
     "phone": "1-770-736-8031 x56442",
-    "practice": "Criminal"
+    "practice": "Criminal",
+    "practice_id": 13,
+    "practiceId": "62fb60f059541741ca7c6e67"
   },
   {
     "count": 2,
     "name": "Adv Ervin Howell",
     "email": "Shanna@melissa.tv",
     "state": "Delhi",
-    "image": "/avatar/2.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "90566-7771",
     "phone": "010-692-6593 x09125",
-    "practice": "Real Estate"
+    "practice": "Real Estate",
+    "practice_id": 12,
+    "practiceId": "62fb60f059541741ca7c6e66"
   },
   {
     "count": 3,
     "name": "Adv Clementine Bauch",
     "email": "Nathan@yesenia.net",
     "state": "Himachal Pradesh",
-    "image": "/avatar/3.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "59590-4157",
     "phone": "1-463-123-4447",
-    "practice": "Criminal"
+    "practice": "Criminal",
+    "practice_id": 13,
+    "practiceId": "62fb60f059541741ca7c6e67"
   },
   {
     "count": 4,
     "name": "Adv Patricia Lebsack",
     "email": "Julianne.OConner@kory.org",
     "state": "Mumbai",
-    "image": "/avatar/4.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "53919-4257",
 
     "phone": "493-170-9623 x156",
-    "practice": "Malpractice"
+    "practice": "Malpractice",
+    "practice_id": 9,
+    "practiceId": "62fb60f059541741ca7c6e63"
   },
   {
     "count": 5,
     "name": "Adv Chelsey Dietrich",
     "email": "Lucio_Hettinger@annie.ca",
     "state": "Karnataka",
-    "image": "/avatar/5.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "33263",
     "phone": "(254)954-1289",
-    "practice": "Tax"
+    "practice": "Tax",
+    "practice_id": 14,
+    "practiceId": "62fb60f059541741ca7c6e68"
   },
   {
     "count": 6,
     "name": "Adv Mrs. Dennis Schulist",
     "email": "Karley_Dach@jasper.info",
     "state": "Norberto Crossing",
-    "image": "/avatar/6.jpg",
+    "image": "/avatar/1.jpg",
     "city": "South Christy",
     "zipcode": "23505-1337",
     "phone": "1-477-935-8478 x6430",
-    "practice": "Family"
+    "practice": "Family",
+    "practice_id": 8,
+    "practiceId": "62fb60f059541741ca7c6e62"
   },
   {
     "count": 7,
     "name": "Adv Kurtis Weissnat",
     "email": "Telly.Hoeger@billy.biz",
     "state": "Rex Trail",
-    "image": "/avatar/7.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "58804-1099",
     "phone": "210.067.6132",
-    "practice": "Bankruptcy"
+    "practice": "Bankruptcy",
+    "practice_id": 1,
+    "practiceId": "62fb60f059541741ca7c6e5b"
   },
   {
     "count": 8,
@@ -77,10 +91,12 @@
     "username": "Maxime_Nienow",
     "email": "Sherwood@rosamond.me",
     "state": "Ellsworth Summit",
-    "image": "/avatar/8.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "45169",
     "phone": "586.493.6943 x140",
-    "practice": "Civil Rights"
+    "practice": "Civil Rights",
+    "practice_id": 2,
+    "practiceId": "62fb60f059541741ca7c6e5c"
   },
   {
     "count": 9,
@@ -88,20 +104,24 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/9.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Constitutional"
+    "practice": "Constitutional",
+    "practice_id": 3,
+    "practiceId": "62fb60f059541741ca7c6e5d"
   },
   {
     "count": 10,
     "name": "Adv Clementina DuBuque",
     "email": "Rey.Padberg@karina.biz",
     "state": "Kattie Turnpike",
-    "image": "/avatar/10.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "31428-2261",
     "phone": "024-648-3804",
-    "practice": "Contract"
+    "practice": "Contract",
+    "practice_id": 4,
+    "practiceId": "62fb60f059541741ca7c6e5e"
   },
   {
     "count": 11,
@@ -109,10 +129,12 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/11.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Corporate"
+    "practice": "Corporate",
+    "practice_id": 5,
+    "practiceId": "62fb60f059541741ca7c6e5f"
   },
   {
     "count": 12,
@@ -120,10 +142,12 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/12.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Corporate"
+    "practice": "Corporate",
+    "practice_id": 5,
+    "practiceId": "62fb60f059541741ca7c6e5f"
   },
   {
     "count": 13,
@@ -131,10 +155,12 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/13.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Public"
+    "practice": "Public",
+    "practice_id": 11,
+    "practiceId": "62fb60f059541741ca7c6e65"
   },
   {
     "count": 14,
@@ -142,10 +168,12 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/14.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Property"
+    "practice": "Property",
+    "practice_id": 10,
+    "practiceId": "62fb60f059541741ca7c6e64"
   },
   {
     "count": 15,
@@ -153,10 +181,12 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/15.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Environment"
+    "practice": "Environment",
+    "practice_id": 7,
+    "practiceId": "62fb60f059541741ca7c6e61"
   },
   {
     "count": 16,
@@ -164,10 +194,12 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/16.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Employment"
+    "practice": "Employment",
+    "practice_id": 6,
+    "practiceId": "62fb60f059541741ca7c6e60"
   },
   {
     "count": 17,
@@ -175,10 +207,12 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/17.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Employment"
+    "practice": "Employment",
+    "practice_id": 6,
+    "practiceId": "62fb60f059541741ca7c6e60"
   },
   {
     "count": 18,
@@ -186,10 +220,12 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/18.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Employment"
+    "practice": "Employment",
+    "practice_id": 6,
+    "practiceId": "62fb60f059541741ca7c6e60"
   },
   {
     "count": 19,
@@ -197,10 +233,12 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/19.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Employment"
+    "practice": "Employment",
+    "practice_id": 6,
+    "practiceId": "62fb60f059541741ca7c6e60"
   },
   {
     "count": 20,
@@ -208,9 +246,11 @@
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
     "state": "Dayna Park",
-    "image": "/avatar/20.jpg",
+    "image": "/avatar/1.jpg",
     "zipcode": "76495-3109",
     "phone": "(775)976-6794 x41206",
-    "practice": "Employment"
+    "practice": "Employment",
+    "practice_id": 6,
+    "practiceId": "62fb60f059541741ca7c6e60"
   }
 ]

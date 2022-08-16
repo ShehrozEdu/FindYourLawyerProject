@@ -4,8 +4,10 @@ const Lawyers = require("../Resources/LawyersList.json");
 
 const LawyersListController = {
   getLawyersList: expressAsyncHandler(async function (req, res) {
+    let id = req.query.lid;
+    id = id ? id : 0;
     try {
-      let result = await LawyersModel.find();
+      let result = await LawyersModel.find({ practiceId: id });
       res.status(200).send({
         status: true,
         LawyersList: result,

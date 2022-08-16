@@ -1,31 +1,32 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
 import LawyersListBox from "./LawyerListBox";
 
 export default function LawyersList() {
   let [lawyersList, setLawyersList] = useState([]);
   let [sortLawyers, setSortLawyers] = useState([]);
+  const params = useParams();
+  let getLawyerData = async () => {
+    let URL = "http://localhost:5000/api/lawyersList/?lid=" + params.id;
 
-  let getLawyersList = async () => {
-    let URL = "http://localhost:5000/api/lawyersList";
-    let response = await axios.get(URL);
-    let { status, LawyersList } = response.data;
-    // console.log(status);
-    // console.log(Practice);
     try {
+      let response = await axios.get(URL);
+      let { status, LawyersList } = response.data;
+      // console.log(response.data);
       if (status) {
         setLawyersList([...LawyersList]);
       } else {
-        alert("Cannot fetch Lawyers, please Refresh");
+        alert("Sorry,can't find any menu for this");
       }
     } catch (error) {
       alert(error);
     }
   };
   useEffect(() => {
-    getLawyersList();
+    getLawyerData();
   }, []);
-
   return (
     <>
       <section className="text-gray-600 body-font">

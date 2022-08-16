@@ -23,10 +23,7 @@ OtherRouters.get("/testimonials", TestimonialsController.getTestimonials);
 //Practice
 OtherRouters.post("/add-practices", PracticeController.addPractice);
 OtherRouters.get("/practices", PracticeController.getPractice);
-OtherRouters.get(
-  "/getpracticebytitle",
-  PracticeController.getLocationByPracticeName
-);
+OtherRouters.get("/getpracticebyid/:id", PracticeController.getPracticeById);
 
 //News
 OtherRouters.post("/add-news", NewsController.addNews);

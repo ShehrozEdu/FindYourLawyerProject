@@ -5,7 +5,7 @@ const cors = require("cors");
 const UserRouter = require("./app/Routes/Userrouter");
 const PostRouter = require("./app/Routes/PostRouter");
 const OtherRouters = require("./app/Routes/OtherRouters");
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 const {
   errorHandler,
   notFound,
@@ -22,41 +22,41 @@ app.use(cors());
 
 //ContactForm
 
-const contactEmail = nodemailer.createTransport({
-  host: process.env.MAIL_HOST,
-  port: process.env.MAIL_PORT,
-  auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
-  },
-});
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
-  }
-});
-app.post("/contact", (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message;
-  const mail = {
-    from: name,
-    to: "***************@gmail.com",
-    subject: "Contact Form Submission",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Message: ${message}</p>`,
-  };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res?.json({ status: "ERROR" });
-    } else {
-      res?.json({ status: "Message Sent" });
-    }
-  });
-});
+// const contactEmail = nodemailer.createTransport({
+//   host: process.env.MAIL_HOST,
+//   port: process.env.MAIL_PORT,
+//   auth: {
+//     user: process.env.MAIL_USER,
+//     pass: process.env.MAIL_PASS,
+//   },
+// });
+// contactEmail.verify((error) => {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log("Ready to Send");
+//   }
+// });
+// app.post("/contact", (req, res) => {
+//   const name = req.body.name;
+//   const email = req.body.email;
+//   const message = req.body.message;
+//   const mail = {
+//     from: name,
+//     to: "***************@gmail.com",
+//     subject: "Contact Form Submission",
+//     html: `<p>Name: ${name}</p>
+//            <p>Email: ${email}</p>
+//            <p>Message: ${message}</p>`,
+//   };
+//   contactEmail.sendMail(mail, (error) => {
+//     if (error) {
+//       res?.json({ status: "ERROR" });
+//     } else {
+//       res?.json({ status: "Message Sent" });
+//     }
+//   });
+// });
 //user Router
 app.use("/api/users", UserRouter);
 

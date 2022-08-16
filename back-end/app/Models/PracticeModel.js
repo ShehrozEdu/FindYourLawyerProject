@@ -19,6 +19,12 @@ const practiceSchema = new Schema({
     type: String,
     required: true,
   },
+  practice: {
+    type: String,
+  },
+  practice_id: {
+    type: Number,
+  },
 });
 
 const Practice = mongoose.model("Practice", practiceSchema);

@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import BookingsBox from "./BookingsBox";
 
 export default function Bookings() {
   let [booking, setBooking] = useState([]);
+
   let [sort, setSort] = useState("");
 
   let BookingsData = async () => {
     let URL = "http://localhost:5000/api/practices";
     let response = await axios.get(URL);
     let { status, Practice } = response.data;
-    // console.log(status);
-    // console.log(Practice);
+
     try {
       if (status) {
         setBooking([...Practice]);
@@ -25,30 +26,6 @@ export default function Bookings() {
   useEffect(() => {
     BookingsData();
   }, []);
-
-  // let getPracticeSort = async (event) => {
-  //   let title = event.target.value;
-  //   let url = "http://localhost:5000/api/getpracticebytitle?title=" + title;
-
-  //   try {
-  //     let response = await axios.get(url);
-
-  //     let { title } = response.data;
-  //     console.log(response.data);
-  //     setSort({ ...title });
-
-  //   } catch (error) {
-  //     alert(error);
-  //     // console.log(error);
-  //   }
-  // };
-  // let test = (sort) => {
-  //   sort = JSON.parse(sort);
-  //   PracticeRef.current.value = `${sort.title}`;
-  //   setSort({ ...sort });
-  //   // setResDisable(false);
-  //   setSort([]);
-  // };
 
   return (
     <>
@@ -108,7 +85,13 @@ export default function Bookings() {
                 }
               })
               .map((book) => {
-                return <BookingsBox book={book} key={book._id} />;
+                return (
+                  <BookingsBox
+                    book={book}
+                    key={book._id}
+                    // lawyersList={lawyersList}
+                  />
+                );
               })}
           </div>
         </div>

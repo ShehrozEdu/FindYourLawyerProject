@@ -18,6 +18,7 @@ import Article from "./components/BlogCRUD/Article/Article";
 import Blog from "./components/BlogCRUD/Article/Blog";
 import Error from "./components/Error";
 import Pricing from "./components/Categories/Pricing";
+import PracticeOverview from "./components/Lawyers/PracticeOverview";
 
 function App() {
   return (
@@ -41,9 +42,10 @@ function App() {
           {/* //blogs */}
           <Route path={"/blogs"} element={<Blog />} />
           <Route path={"/article/:name"} element={<Article />} />
-          {/* <Route path={"/pricing"} element={<Pricing />} /> */}
-        </Routes>
-        <Routes>
+          <Route
+            path={"/lawyerListOverview/:id"}
+            element={<PracticeOverview />}
+          />
           <Route path={"*"} element={<Error />} />
         </Routes>
       </>

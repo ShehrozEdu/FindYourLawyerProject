@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId;
 
 const LawyersListSchema = new Schema({
   count: {
@@ -26,6 +27,12 @@ const LawyersListSchema = new Schema({
   },
   practice: {
     type: String,
+  },
+  // practice_id: {
+  //   type: Number,
+  // },
+  practiceId: {
+    type: ObjectId,
   },
 });
 
