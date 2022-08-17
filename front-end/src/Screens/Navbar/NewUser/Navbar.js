@@ -9,14 +9,14 @@ export default function NewUSerNavBar() {
 
   return (
     <>
-      <nav className="w-full bg-white dark:bg-gray-600 shadow">
+      <nav className="w-full bg-white dark:bg-gray-900 shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <Link to="/">
-                <img src="img/logo.png" className="logo" alt="" />
+                <img src="img/logo.png" className="logo " alt="" />
               </Link>
-              <h2 className="ml-3 text-xl text-black dark:">
+              <h2 className="ml-3 text-xl text-black dark:text-white">
                 Find Your Lawyer
               </h2>
               <div className="md:hidden">

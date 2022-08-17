@@ -3,16 +3,16 @@ import React from "react";
 export default function TopLawyers() {
   return (
     <>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font dark:bg-gray-800 ">
         <div className="container px-4 py-24 mx-auto">
           <div className="flex flex-wrap w-full mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 className=" text-3xl lg:text-5xl font-bold underline title-font mb-2 text-slate-600 Crimson ">
+              <h1 className=" text-3xl lg:text-5xl font-bold underline title-font mb-2 text-amber-800 Crimson ">
                 Our Top Lawyers
                 <i class="bx bxs-to-top d-flex align-middle"></i>
               </h1>
             </div>
-            <p className="lg:w-1/2 w-full leading-relaxed text-gray-500 Crimson">
+            <p className="lg:w-1/2 w-full text-slate-700 leading-relaxed dark:text-white Crimson">
               In India, the legal profession is not only known for attractive
               packages but it is known for legal reformations for the people of
               India. Whether making amendments for fast-track court trials for
@@ -22,8 +22,8 @@ export default function TopLawyers() {
             </p>
           </div>
           <div className="flex flex-wrap -m-4">
-            <div className="xl:w-1/4 md:w-1/2 p-4">
-              <div className="bg-gray-100 p-6 rounded-lg">
+            <div className="xl:w-1/4 md:w-1/2 p-4 ">
+              <div className="bg-gray-100 p-6 rounded-lg dark:bg-gray-400">
                 <img
                   className="h-40 rounded w-full object-cover object-center mb-6"
                   src="/img/TopLawyer1.jpeg"
@@ -40,7 +40,7 @@ export default function TopLawyers() {
               </div>
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-4">
-              <div className="bg-gray-100 p-6 rounded-lg">
+              <div className="bg-gray-100 p-6 rounded-lg dark:bg-gray-400">
                 <img
                   className="h-40 rounded w-full object-cover object-center mb-6"
                   src="/img/TopLawyer2.jpeg"
@@ -58,7 +58,7 @@ export default function TopLawyers() {
               </div>
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-4">
-              <div className="bg-gray-100 p-6 rounded-lg">
+              <div className="bg-gray-100 p-6 rounded-lg dark:bg-gray-400">
                 <img
                   className="h-40 rounded w-full object-cover object-center mb-4"
                   src="/img/TopLawyer3.jpeg"
@@ -76,7 +76,7 @@ export default function TopLawyers() {
               </div>
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-4">
-              <div className="bg-gray-100 p-6 rounded-lg">
+              <div className="bg-gray-100 p-6 rounded-lg dark:bg-gray-400">
                 <img
                   className="h-40 rounded w-full object-cover object-center mb-6"
                   src="img/topLawyer4.jpeg"

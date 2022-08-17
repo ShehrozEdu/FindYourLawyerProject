@@ -46,13 +46,13 @@ export default function Bookings() {
   }, []);
   return (
     <>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font dark:bg-gray-800">
         <div className="container px-5 py-10 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-gray-600 underline Crimson">
+            <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-amber-600 underline Crimson">
               Book according to the need!
             </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base text">
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base dark:text-white">
               We Promise you the best and at cheaper price!
             </p>
           </div>

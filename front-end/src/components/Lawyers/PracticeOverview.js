@@ -127,7 +127,7 @@ export default function PracticeOverview() {
 
   return (
     <>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font  dark:bg-gray-800">
         <div className="container px-5 py-24 mx-auto flex flex-col">
           <div className="lg:w-4/6 mx-auto">
             <div className="rounded-lg h-100 overflow-hidden">
@@ -139,10 +139,10 @@ export default function PracticeOverview() {
             </div>
             <div className="flex flex-col sm:flex-row mt-10">
               <div className="sm:w-4/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
+                <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3 dark:text-white">
                   {practice.title}
                 </h2>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-lg mb-4 dark:text-white  ">
                   {practice.description}
                 </p>
 
@@ -158,15 +158,15 @@ export default function PracticeOverview() {
                 {/* --------------------------------------------------------------------------------- */}
                 {showModal ? (
                   <>
-                    <div className="justify-center practices-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-                      <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                    <div className="justify-center practices-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-slate-300 dark:bg-gray-600">
+                      <div className="relative w-auto my-6 mx-auto max-w-3xl ">
                         {/*content*/}
-                        <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                        <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none dark:bg-gray-700">
                           {/* -------------------- */}
                           {/*header*/}
                           {/* ------------------------------------- */}
                           <div className="flex practices-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                            <h3 className="text-3xl font-semibold">
+                            <h3 className="text-3xl font-semibold dark:text-white">
                               {practice.title}
                             </h3>
                           </div>
@@ -180,19 +180,19 @@ export default function PracticeOverview() {
                                 <section className="text-gray-600 body-font">
                                   <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
                                     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                                      <h3 className="title-font sm:text-2xl text-xl mb-2 font-medium text-gray-900">
+                                      <h3 className="title-font sm:text-2xl text-xl mb-2 font-medium text-gray-900 dark:text-white">
                                         {adv.name},
                                       </h3>
-                                      <span className="mb-2   leading-relaxed">
+                                      <span className="mb-2  dark:text-white leading-relaxed">
                                         {adv.state}
                                       </span>
-                                      <p className="mb-2   leading-relaxed">
+                                      <p className="mb-2  dark:text-white leading-relaxed">
                                         {adv.email}
                                       </p>
-                                      <span className="mb-2   leading-relaxed">
+                                      <span className="mb-2 dark:text-white  leading-relaxed">
                                         Ratings: {adv.ratings}
                                       </span>
-                                      <span className="mb-2   leading-relaxed">
+                                      <span className="mb-2  dark:text-white leading-relaxed">
                                         Amount: {adv.amount}
                                       </span>
 

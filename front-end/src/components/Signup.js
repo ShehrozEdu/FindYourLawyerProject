@@ -45,13 +45,13 @@ export default function Signup() {
   return (
     <>
       <div
-        className="min-h-screen bg-gray-100 text-gray-900 flex justify-center"
+        className="min-h-screen bg-gray-100 text-gray-900 flex justify-center dark:bg-gray-800"
         id="signup"
       >
-        <div className="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1">
+        <div className="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1 dark:bg-gray-700">
           <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
             <div className="mt-12 flex flex-col items-center">
-              <h1 className="text-3xl xl:text-4xl font-extrabold text-gray-600 underline  Crimson">
+              <h1 className="text-3xl xl:text-4xl font-extrabold text-amber-600 underline  Crimson">
                 Sign upto begin
                 {appErr || serverErr ? (
                   <div className="text-red-300 text-center">
@@ -198,9 +198,9 @@ export default function Signup() {
               </div>
             </div>
           </div>
-          <div className="flex-1 bg-gray-200 text-center hidden lg:flex">
-            <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
-              <img src="img/test.jpg" alt="" />
+          <div className="flex-1 bg-gray-200 text-center hidden lg:flex dark:bg-gray-700">
+            <div className="m-12 xl:m-16 w-full bg-contain bg-center  bg-no-repeat">
+              <img src="img/test.jpg" className="" alt="" />
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function ServiceBox(props) {
   // let { service } = props;
   return (
     <>
-      <div className="container flex px-5 py-10 md:flex-row flex-col items-center">
+      <div className="container flex px-5 py-10 md:flex-row flex-col items-center bg-slate-200 dark:bg-gray-700">
         <div className="lg:max-w-lg lg:w-full md:w-1/3 w-5/4 lg:mr-16 mr-4">
           <img
             className="object-cover object-center rounded"
@@ -18,25 +18,25 @@ export default function ServiceBox(props) {
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-5 md:mb-2 items-center text-center">
           <Link to="/services/IPC&CRPC">
-            <h1 className="title-font sm:text-3xl text-4xl mb-4 font-bold text-rose-900 hex cursor-pointer">
+            <h1 className="title-font sm:text-3xl text-4xl mb-4 font-bold text-rose-900 hex cursor-pointer ">
               IPCs and CRPCs
             </h1>
           </Link>
-          <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson">
+          <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson dark:text-white">
             Read about the latest updates in the legal field and downloadable
             IPC and CRC
           </p>
         </div>
       </div>
-      <hr />
-      <div className="container flex px-5 py-10 md:flex-row flex-col items-center">
+
+      <div className="container flex px-5 py-10 md:flex-row flex-col items-center mt-3 bg-slate-200 dark:bg-gray-700">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-2 items-center text-center">
           <Link to="/blogs">
             <h1 className="title-font sm:text-3xl text-4xl mb-4 font-bold text-rose-900 hex cursor-pointer">
               BLOGS
             </h1>
           </Link>
-          <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson">
+          <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson dark:text-white">
             Read the blogs by our working Professionals dedicated specifically
             to recent updates
           </p>
@@ -49,8 +49,8 @@ export default function ServiceBox(props) {
           />
         </div>
       </div>
-      <hr />
-      <div className="container flex px-4 py-8 md:flex-row flex-col items-center">
+
+      <div className="container flex px-4 py-8 md:flex-row flex-col items-center mt-3 bg-slate-200 dark:bg-gray-700">
         <div className="lg:max-w-lg lg:w-full md:w-1/3 w-5/4 lg:mr-16 mr-4">
           <img
             className="object-cover object-center rounded"
@@ -64,7 +64,7 @@ export default function ServiceBox(props) {
               STUDENTS CORNER
             </h1>
           </Link>
-          <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson">
+          <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson dark:text-white">
             Get access to the free knowledge and keep yourself updated with
             current happenings!
           </p>

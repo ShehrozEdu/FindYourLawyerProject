@@ -44,12 +44,12 @@ const Login = () => {
   if (userAuth) return <Navigate to="/bookings" />;
   return (
     <>
-      <div className="lg:flex">
+      <div className="lg:flex dark:bg-gray-800">
         <div className="lg:w-1/2 xl:max-w-screen-sm">
-          <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12"></div>
+          <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12 dark:bg-gray-800"></div>
           <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
             <h2
-              className="text-center text-4xl text-gray-500 font-display font-semibold lg:text-left xl:text-5xl
+              className="text-center text-4xl text-amber-600 font-display font-semibold lg:text-left xl:text-5xl
                     xl:text-bold underline Crimson "
             >
               Sign in
@@ -130,8 +130,8 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 bg-gray-200 text-center hidden lg:flex">
-          <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
+        <div className="flex-1 bg-gray-200 dark:bg-gray-800 text-center hidden lg:flex">
+          <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat ">
             <img src="img/login-img.jpg" alt="" />
           </div>
         </div>

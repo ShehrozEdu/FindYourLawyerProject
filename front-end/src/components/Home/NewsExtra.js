@@ -3,9 +3,9 @@ import React from "react";
 export default function NewsExtra() {
   return (
     <>
-      <section className="px-5  dark:bg-gray-800 dark:text-gray-100 mb-32 ">
+      <section className="px-5  dark:bg-gray-800 dark:text-gray-100 py-6 ">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="text-3xl lg:text-5xl font-bold title-font mb-4  text-slate-600 underline  Crimson">
+          <h1 className="text-3xl lg:text-5xl font-bold title-font mb-4  text-amber-800 underline  Crimson dark:text-amber-800">
             <i class="bx bx-news d-flex align-middle mr-3 "></i>Latest News
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base ">
