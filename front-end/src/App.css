@@ -10,6 +10,11 @@ body {
 }
 
 @tailwind utilities;
+.background-clr {
+  width: 100px;
+  height: 100px;
+  margin-top: 5.5rem;
+}
 
 .bg-img1 {
   display: flex;

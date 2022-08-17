@@ -13,12 +13,12 @@ export default function Modal({ practice }) {
       </button>
       {showModal ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+          <div className="justify-center practices-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                <div className="flex practices-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text-3xl font-semibold">{practice.title}</h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -29,18 +29,44 @@ export default function Modal({ practice }) {
                     </span>
                   </button>
                 </div>
-                {/*body*/}
+                {/*MODAL body*/}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down by their perception of
-                    themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
-                  </p>
+                  <section class="text-gray-600 body-font">
+                    <div class="container mx-auto flex px-5  md:flex-row flex-col items-center">
+                      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                        <h1 class="title-font sm:text-2xl text-xl mb-4 font-medium text-gray-900">
+                          Before they sold out
+                          <br class="hidden lg:inline-block" />
+                          readymade gluten
+                        </h1>
+                        <p class="mb-8 leading-relaxed">
+                          Copper mug try-hard pitchfork pour-over freegan
+                          heirloom neutra air plant cold-pressed tacos poke
+                          beard tote bag. Heirloom echo park mlkshk tote bag
+                          selvage hot chicken authentic tumeric truffaut hexagon
+                          try-hard chambray.
+                        </p>
+                        <div class="flex justify-center">
+                          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                            Button
+                          </button>
+                          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+                            Button
+                          </button>
+                        </div>
+                      </div>
+                      <div class="lg:max-w-lg lg:w-32 md:w-32 w-32">
+                        <img
+                          class="object-cover object-center rounded"
+                          alt="hero"
+                          src="https://dummyimage.com/720x600"
+                        />
+                      </div>
+                    </div>
+                  </section>
                 </div>
                 {/*footer*/}
-                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                <div className="flex practices-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
