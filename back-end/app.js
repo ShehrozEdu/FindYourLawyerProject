@@ -1,10 +1,12 @@
 require("dotenv").config();
+const Razorpay = require("razorpay");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const UserRouter = require("./app/Routes/Userrouter");
 const PostRouter = require("./app/Routes/PostRouter");
 const OtherRouters = require("./app/Routes/OtherRouters");
+const razor = require("./app/Controllers/Payment");
 // const nodemailer = require("nodemailer");
 const {
   errorHandler,
@@ -20,6 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 //cors
 app.use(cors());
 
+//RAZORPAY
+app.use("/payment", razor);
 //ContactForm
 
 // const contactEmail = nodemailer.createTransport({

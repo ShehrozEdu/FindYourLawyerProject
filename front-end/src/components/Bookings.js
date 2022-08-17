@@ -77,7 +77,7 @@ export default function Bookings() {
               </div>
 
               <input
-                className="peer h-full w-full outline-none text-sm bg-slate-200 text-gray-700 pr-2"
+                className="peer h-full w-full outline-none border-0 text-sm bg-slate-200 text-gray-700 pr-2"
                 type="text"
                 id="search"
                 placeholder="Search by practice"

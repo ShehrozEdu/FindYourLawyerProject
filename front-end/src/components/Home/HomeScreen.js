@@ -8,13 +8,15 @@ import ContactUs from "./ContactUs";
 import Footer from "./Footer";
 import TopLawyers from "./TopLawyers";
 import NewsFeed from "./NewsFeed";
+import NewsExtra from "./NewsExtra";
 
 function HomeScreen() {
   return (
     <>
       <BgImg />
       <TopLawyers />
-      <NewsFeed />
+      {/* <NewsFeed /> */}
+      <NewsExtra />
       <Services />
       <TrustedPartners />
       <Testimonials />

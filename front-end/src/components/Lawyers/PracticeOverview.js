@@ -2,14 +2,86 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import ModalPop from "./ModalPop";
+function loadScript(src) {
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.body.appendChild(script);
+  });
+}
+async function displayRazorpay() {
+  const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
 
+  if (!res) {
+    alert("Razorpay SDK failed to load. Are you online?");
+    // return;
+  }
+
+  const result = await axios.post("http://localhost:5000/payment/orders");
+
+  if (!result) {
+    alert("Server error. Are you online?");
+    // return;
+  }
+
+  const { amount, id: order_id, currency } = result.data;
+
+  const options = {
+    key: "rzp_test_Gaer6wsOr2pz3k", // Enter the Key ID generated from the Dashboard
+    amount: amount.toString(),
+    currency: currency,
+    name: "Sheh",
+    description: "Test Transaction",
+    // image: { logo },
+    order_id: order_id,
+    handler: async function (response) {
+      const data = {
+        orderCreationId: order_id,
+        razorpayPaymentId: response.razorpay_payment_id,
+        razorpayOrderId: response.razorpay_order_id,
+        razorpaySignature: response.razorpay_signature,
+      };
+
+      const result = await axios.post(
+        "http://localhost:5000/payment/success",
+        data
+      );
+
+      alert(result.data.msg);
+    },
+    prefill: {
+      name: "Shehroz",
+      email: "example@example.com",
+      contact: "9999999999",
+    },
+    notes: {
+      address: "Example Corporate Office",
+    },
+    theme: {
+      color: "#61dafb",
+    },
+  };
+
+  const paymentObject = new window.Razorpay(options);
+  paymentObject.open();
+}
 export default function PracticeOverview() {
   let [practice, setPractice] = useState([]);
   let [lawyer, setLawyer] = useState([]);
   let [showModal, setShowModal] = useState(false);
-  // const [modalOpen, setModalOpen] = useState(false);
-  let [subTotal, setSubTotal] = useState(0);
   const params = useParams();
+  //RAZORPAY
+
+  //--------------------------
+  //RP ENDS
+  //--------------------------
+
   let getPracticeID = async () => {
     let URL = "http://localhost:5000/api/getpracticebyid/" + params.id;
     try {
@@ -125,7 +197,10 @@ export default function PracticeOverview() {
                                       </span>
 
                                       <div className="flex justify-center">
-                                        <button className="inline-flex text-white bg-amber-500 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">
+                                        <button
+                                          className="inline-flex text-white bg-amber-500 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg"
+                                          onClick={displayRazorpay}
+                                        >
                                           Book
                                         </button>
                                       </div>
