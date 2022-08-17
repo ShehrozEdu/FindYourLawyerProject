@@ -47,7 +47,7 @@ const Login = () => {
       <div className="lg:flex dark:bg-gray-800">
         <div className="lg:w-1/2 xl:max-w-screen-sm">
           <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12 dark:bg-gray-800"></div>
-          <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+          <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl ">
             <h2
               className="text-center text-4xl text-amber-600 font-display font-semibold lg:text-left xl:text-5xl
                     xl:text-bold underline Crimson "
@@ -66,7 +66,7 @@ const Login = () => {
             <div className="mt-12">
               <form onSubmit={formik.handleSubmit}>
                 <div>
-                  <div className="text-sm font-bold text-gray-700 tracking-wide">
+                  <div className="text-sm font-bold text-gray-700 tracking-wide dark:text-white">
                     Email Address
                   </div>
                   <input
@@ -83,7 +83,7 @@ const Login = () => {
                 </div>
                 <div className="mt-8">
                   <div className="flex justify-between items-center">
-                    <div className="text-sm font-bold text-gray-700 tracking-wide">
+                    <div className="text-sm font-bold text-gray-700 tracking-wide dark:text-white">
                       Password
                     </div>
                     {/* <div>
