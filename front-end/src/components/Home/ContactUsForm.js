@@ -1,17 +1,43 @@
 import React from "react";
 // import axios from "axios";
-
+import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
 export default function ContactUsForm() {
-  let refresh = () => {
-    alert("Email sent");
-    window.location.refresh();
+  const SERVICE_ID = "service_nbf5o6g";
+  const TEMPLATE_ID = "template_3bze04o";
+  const USER_ID = "luWwEIEYNiIUaNrGd";
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+      (result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent Successfully",
+        });
+      },
+      (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: "error",
+          title: "Ooops, something went wrong",
+          text: error.text,
+        });
+      }
+    );
+    e.target.reset();
+    window.target.refresh();
   };
+  // let refresh = () => {
+  //   alert("Email sent");
+  //   window.location.refresh();
+  // };
 
   return (
     <>
       <div className="container px-5 py-24 mx-auto flex">
         <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
-          <form>
+          <form onSubmit={handleOnSubmit}>
             <h2
               className="text-center text-4xl text-gray-900 font-display font-semibold lg:text-left xl:text-5xl
                     xl:text-bold mb-5 Crimson underline"
@@ -64,7 +90,6 @@ export default function ContactUsForm() {
               className="bg-gray-500 text-gray-100 p-4 w-full rounded-full tracking-wide
                                 font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-slate-600
                                 shadow-lg"
-              onClick={refresh}
             >
               Send
             </button>
