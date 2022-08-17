@@ -28,6 +28,7 @@ export default function ServiceBox(props) {
           </p>
         </div>
       </div>
+      <hr />
       <div className="container flex px-5 py-10 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-2 items-center text-center">
           <Link to="/blogs">
@@ -48,6 +49,7 @@ export default function ServiceBox(props) {
           />
         </div>
       </div>
+      <hr />
       <div className="container flex px-4 py-8 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/3 w-5/4 lg:mr-16 mr-4">
           <img

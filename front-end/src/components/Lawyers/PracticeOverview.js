@@ -5,7 +5,10 @@ import ModalPop from "./ModalPop";
 
 export default function PracticeOverview() {
   let [practice, setPractice] = useState([]);
+  let [lawyer, setLawyer] = useState([]);
+  let [showModal, setShowModal] = useState(false);
   // const [modalOpen, setModalOpen] = useState(false);
+  let [subTotal, setSubTotal] = useState(0);
   const params = useParams();
   let getPracticeID = async () => {
     let URL = "http://localhost:5000/api/getpracticebyid/" + params.id;
@@ -28,6 +31,28 @@ export default function PracticeOverview() {
   useEffect(() => {
     getPracticeID();
   }, []);
+  let getLawyerData = async () => {
+    let URL = "http://localhost:5000/api/lawyersList/?lid=" + params.id;
+    // console.log(params.id);
+
+    try {
+      let response = await axios.get(URL);
+      let { status, LawyersList } = response.data;
+      // console.log(response.data);
+      if (status) {
+        setLawyer([...LawyersList]);
+      } else {
+        alert("Sorry,can't find any lawyer for this");
+      }
+    } catch (error) {
+      alert(error);
+    }
+  };
+  useEffect(() => {
+    getLawyerData();
+    // console.log(getLawyerData);
+  }, []);
+
   return (
     <>
       <section className="text-gray-600 body-font">
@@ -49,15 +74,90 @@ export default function PracticeOverview() {
                   {practice.description}
                 </p>
 
-                {/* <button
-                  className="flex mx-auto mt-6 openModalBtn text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded Crimson"
-                  onClick={() => {
-                    setModalOpen(true);
-                  }}
+                <button
+                  className=" text-black bg-pink-300 hover:bg-pink-500  font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none flex mx-auto mt-3 ease-linear transition-all duration-150"
+                  type="button"
+                  onClick={() => setShowModal(true)}
                 >
-                  Click to book
-                </button> */}
-                <ModalPop practice={practice} />
+                  Book your Lawyer
+                </button>
+                {/* --------------------------------------------------------------------------------- */}
+                {/* <MODAL STARTS> */}
+                {/* --------------------------------------------------------------------------------- */}
+                {showModal ? (
+                  <>
+                    <div className="justify-center practices-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+                      <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                        {/*content*/}
+                        <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                          {/* -------------------- */}
+                          {/*header*/}
+                          {/* ------------------------------------- */}
+                          <div className="flex practices-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                            <h3 className="text-3xl font-semibold">
+                              {practice.title}
+                            </h3>
+                          </div>
+                          {/*MODAL body*/}
+                          {lawyer.map((adv, index) => {
+                            return (
+                              <div
+                                className="relative p-6 flex-auto"
+                                key={index}
+                              >
+                                <section className="text-gray-600 body-font">
+                                  <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
+                                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                                      <h3 className="title-font sm:text-2xl text-xl mb-2 font-medium text-gray-900">
+                                        {adv.name},
+                                      </h3>
+                                      <span className="mb-2   leading-relaxed">
+                                        {adv.state}
+                                      </span>
+                                      <p className="mb-2   leading-relaxed">
+                                        {adv.email}
+                                      </p>
+                                      <span className="mb-2   leading-relaxed">
+                                        Ratings: {adv.ratings}
+                                      </span>
+                                      <span className="mb-2   leading-relaxed">
+                                        Amount: {adv.amount}
+                                      </span>
+
+                                      <div className="flex justify-center">
+                                        <button className="inline-flex text-white bg-amber-500 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">
+                                          Book
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div className="lg:max-w-lg lg:w-44 md:w-44 w-44 ml-6">
+                                      <img
+                                        className="object-cover object-center rounded"
+                                        alt="hero"
+                                        src={"/img/" + adv.image}
+                                      />
+                                    </div>
+                                  </div>
+                                </section>
+                              </div>
+                            );
+                          })}
+                          {/*footer*/}
+                          <div className="flex practices-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                            <button
+                              className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                              type="button"
+                              onClick={() => setShowModal(false)}
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+                  </>
+                ) : null}
               </div>
             </div>
           </div>

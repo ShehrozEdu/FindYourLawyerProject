@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import BookingsBox from "./BookingsBox";
-import Pagination from "./Pagination/Pagination";
+// import Pagination from "./Pagination/Pagination";
 
 export default function Bookings() {
   let [booking, setBooking] = useState([]);
@@ -15,6 +15,7 @@ export default function Bookings() {
     let URL = "http://localhost:5000/api/practices";
     let response = await axios.get(URL);
     let { status, Practice } = response.data;
+    console.log(response.data);
 
     try {
       if (status) {
