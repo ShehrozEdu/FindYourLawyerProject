@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import BookingsBox from "./BookingsBox";
+import Pagination from "./Pagination/Pagination";
 
 export default function Bookings() {
   let [booking, setBooking] = useState([]);
+  let [pageObj, setPageObj] = useState({});
+  let [pageCount, setPageCount] = useState(0);
 
   let [sort, setSort] = useState("");
 
@@ -16,6 +19,7 @@ export default function Bookings() {
     try {
       if (status) {
         setBooking([...Practice]);
+        // setPageCount(pageCount);
       } else {
         alert("Please Enter Valid Choice");
       }
@@ -23,10 +27,22 @@ export default function Bookings() {
       alert(error);
     }
   };
+  // let pagination = (event, option) => {
+  //   let { value } = event.target;
+  //   let _pageObj = {};
+  //   switch (option) {
+  //     case "page":
+  //       _pageObj["page"] = value;
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  //   setPageObj({ ...pageObj, ..._pageObj });
+  //   console.log(pageObj);
+  // };
   useEffect(() => {
     BookingsData();
   }, []);
-
   return (
     <>
       <section className="text-gray-600 body-font">
@@ -94,6 +110,7 @@ export default function Bookings() {
                 );
               })}
           </div>
+          {/* <Pagination pagination={pagination} pageCount={pageCount} /> */}
         </div>
       </section>
     </>

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import ModalPop from "./ModalPop";
 
 export default function PracticeOverview() {
   let [practice, setPractice] = useState([]);
+  // const [modalOpen, setModalOpen] = useState(false);
   const params = useParams();
   let getPracticeID = async () => {
     let URL = "http://localhost:5000/api/getpracticebyid/" + params.id;
@@ -28,33 +30,39 @@ export default function PracticeOverview() {
   }, []);
   return (
     <>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto flex flex-col">
-          <div class="lg:w-4/6 mx-auto">
-            <div class="rounded-lg h-64 overflow-hidden">
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto flex flex-col">
+          <div className="lg:w-4/6 mx-auto">
+            <div className="rounded-lg h-100 overflow-hidden">
               <img
                 alt="content"
-                class="object-cover object-center h-full w-full"
+                className="object-cover object-center heightOverview w-full"
                 src={practice.image}
               />
             </div>
-            <div class="flex flex-col sm:flex-row mt-10">
-              <div class="sm:w-4/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
+            <div className="flex flex-col sm:flex-row mt-10">
+              <div className="sm:w-4/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">
                   {practice.title}
                 </h2>
-                <p class="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-lg mb-4">
                   {practice.description}
                 </p>
-                <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded Crimson">
+
+                {/* <button
+                  className="flex mx-auto mt-6 openModalBtn text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded Crimson"
+                  onClick={() => {
+                    setModalOpen(true);
+                  }}
+                >
                   Click to book
-                </button>
+                </button> */}
+                <ModalPop practice={practice} />
               </div>
             </div>
           </div>
         </div>
       </section>
-      ;
     </>
   );
 }

@@ -1,20 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+// import Pagination from "./Pagination/Pagination";
 
-export default function BookingsBox(props) {
-  let { book } = props;
-
+export default function BookingsBox({ book }) {
   //navigateToPractice
   const navigate = useNavigate();
   const getPracticeOverview = (id) => {
-    console.log(id);
+    // console.log(id);
     navigate("/lawyerListOverview/" + id);
   };
+
   return (
     <>
-      <div className="lg:w-1/3 sm:w-1/2 p-4 r shadow ">
+      <div className="lg:w-1/3 sm:w-1/2 p-4 r shadow  ">
         <div
-          className="flex relative cursor-pointe"
+          className="flex relative cursor-pointer justify-center"
           onClick={() => getPracticeOverview(book._id)}
         >
           <img

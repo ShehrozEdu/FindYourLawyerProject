@@ -3,8 +3,8 @@ import React from "react";
 export default function NewsBox({ newsItem }) {
   return (
     <>
-      <div className="py-8 px-4 lg:w-1/3  ">
-        <div className="h-full flex items-start  bg-gray-100 ">
+      <div className="py-8 px-4 lg:w-1/3 ">
+        <div className="h-full flex items-start  ">
           <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
             <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">
               Aug

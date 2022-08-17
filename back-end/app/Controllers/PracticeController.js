@@ -4,11 +4,19 @@ const Practice = require("../Resources/Practice.json");
 
 const PracticeController = {
   getPractice: expressAsyncHandler(async function (req, res) {
+    // let { page, itemsPerPage } = req.body;
+    // page = page ? page : 1;
+    // itemsPerPage = itemsPerPage ? itemsPerPage : 3;
+
+    // let startingIndex = page * itemsPerPage - itemsPerPage; //0
+    // let lastIndex = page * itemsPerPage; // 3
     try {
       let result = await PracticeModel.find();
+      // const pageResult = result.slice(startingIndex, lastIndex);
       res.status(200).send({
         status: true,
         Practice: result,
+        // pageCount: Math.ceil(result.length / 2), //gives a round number
       });
     } catch (error) {
       res.status(500).send({
