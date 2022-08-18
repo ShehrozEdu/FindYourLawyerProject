@@ -154,7 +154,7 @@ export default function NewsExtra() {
               <div className="flex px-1 py-4">
                 <img
                   alt=""
-                  className="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                  className="flex-shrink-0 w-20 h-20 mr-4 dark:bg-gray-500 "
                   src="https://source.unsplash.com/random/244x324"
                 />
                 <div className="flex flex-col flex-grow">

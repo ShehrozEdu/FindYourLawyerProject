@@ -10,22 +10,22 @@ export default function BgImg() {
         >
           <div className="w-full sm:w-1/2 lg:w-1/2 rounded-xl m-auto ">
             <div className="rounded px-4 pt-5 pb-4 sm:p-6 sm:pb-4 ">
-              <div className="sm:flex sm:items-start border">
-                <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-center">
+              <div className="sm:flex sm:items-start border shadow">
+                <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-center Crimson p-8">
                   <h3
-                    className=" lg:text-4xl md:text-2xl sm:text-2xl mb-5 text textP leading-6 font-bold text-white mt-2  text-3xl lg:text-5xl"
-                    id="modal-title"
+                    className=" lg:text-5xl md:text-2xl sm:text-2xl textP leading-6 font-bold text-white mt-2  text-3xl "
+                    id="modal-title "
                   >
-                    "Get the best consultation
+                    "Get the best{" "}
+                    <span className="text-amber-600">consultation</span> advice
+                    for your <span className="text-amber-600"> problems"</span>
                   </h3>
                   <div className="mt-2">
-                    <p className="leading-relaxed p-5 font-medium text-2xl text-white textP">
-                      advice for your problems at just a minimal cost,
-                      <br />
-                      <strong className="">at just a minimal cost! </strong>
-                      <br />
-                      <br />
-                      We provide the best solutions to your legal problems."
+                    <p className="leading-relaxed p-0 font-medium text-2xl text-white textP">
+                      <br /> at just a minimal{" "}
+                      <span className="text-amber-600">cost!</span>
+                      <br /> We provide the best solutions to your{" "}
+                      <span className="text-amber-600">legal issues.</span>
                     </p>
                   </div>
                 </div>

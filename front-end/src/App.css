@@ -2,6 +2,7 @@
 @tailwind components;
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/buffalo");
 body {
   margin: 0;
   padding: 0;
@@ -15,7 +16,7 @@ body {
   margin-top: 5.5rem;
 }
 .newsBack {
-  background: url("https://source.unsplash.com/L4YGuSg0fxs") no-repeat center;
+  background: url("../public/img/newsBack.png") no-repeat center;
 }
 .bg-img1 {
   display: flex;
@@ -29,6 +30,9 @@ body {
 }
 .Crimson {
   font-family: "Crimson Pro", serif;
+}
+.Noto {
+  font-family: "buffalo", sans-serif;
 }
 .hex {
   background-image: linear-gradient(to right, #ff9933, #ffffff, #138808);
@@ -74,7 +78,9 @@ body {
   contrast: (1.2);
   opacity: (0.4);
 }
-
+.color {
+  color: #2296b9;
+}
 .service__img {
   width: 350px;
   height: 250px;
@@ -87,6 +93,9 @@ body {
 .heightOverview {
   height: 45vh !important;
 }
+/* .textP {
+  font-size: 3rem;
+} */
 /* TEST */
 @media screen and (max-width: 1100px) {
   .bg-img1 {

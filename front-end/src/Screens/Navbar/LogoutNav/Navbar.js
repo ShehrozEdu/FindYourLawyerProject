@@ -64,20 +64,20 @@ export default function LogoutNavBar() {
               }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-gray-700 dark:text-white  font-bold hover:text-indigo-600 dark:hover:text-yellow-300 ">
+                <li className="text-gray-700 dark:text-white  font-bold hover:text-amber-600 dark:hover:text-yellow-300 ">
                   <Link to="/">Home</Link>
                 </li>
 
-                <li className="text-gray-700 dark:text-white font-medium hover:text-indigo-600 dark:hover:text-yellow-300 ">
+                <li className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 ">
                   <Link to="/bookings">Lawyer Booking</Link>
                 </li>
-                <li className="text-gray-700 dark:text-white font-medium hover:text-indigo-600 dark:hover:text-yellow-300 ">
+                <li className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 ">
                   <Link to="/blogs">Blogs</Link>
                 </li>
 
                 <li
                   onClick={() => dispatch(logoutAction())}
-                  className="text-gray-700 dark:text-white font-medium hover:text-indigo-600 dark:hover:text-yellow-300 "
+                  className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 "
                 >
                   <Link to="/">Logout</Link>
                 </li>

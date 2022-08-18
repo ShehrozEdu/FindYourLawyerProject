@@ -64,21 +64,15 @@ export default function NewUSerNavBar() {
               }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-gray-700 dark:text-white  font-bold hover:text-indigo-600 dark:hover:text-yellow-300 ">
+                <li className="text-gray-700 dark:text-white  font-bold hover:text-amber-600 dark:hover:text-yellow-300 ">
                   <Link to="/">Home</Link>
                 </li>
-                <li className="text-gray-700 dark:text-white font-medium hover:text-indigo-600 dark:hover:text-yellow-300 ">
+                <li className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 ">
                   <Link to="/bookings">Lawyer Booking</Link>
                 </li>
-                <li className="text-gray-700 dark:text-white font-medium hover:text-indigo-600 dark:hover:text-yellow-300 ">
+                <li className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 ">
                   <Link to="/signin">Sign In</Link>
                 </li>
-                <li className="text-gray-700 dark:text-white font-medium hover:text-indigo-600 dark:hover:text-yellow-300 ">
-                  <Link to="#services">About Us</Link>
-                </li>
-                <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-                  Dark Mode
-                </span>{" "}
               </ul>
             </div>
           </div>

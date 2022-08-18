@@ -10,6 +10,7 @@ import TopLawyers from "./TopLawyers";
 import NewsFeed from "./NewsFeed";
 import NewsExtra from "./NewsExtra";
 
+// let t = performance.now();
 function HomeScreen() {
   return (
     <>
@@ -25,5 +26,6 @@ function HomeScreen() {
     </>
   );
 }
-
+// let s = performance.now();
+// console.log(s);
 export default HomeScreen;

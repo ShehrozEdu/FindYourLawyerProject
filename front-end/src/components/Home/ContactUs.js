@@ -6,10 +6,12 @@ export default function ContactUs() {
   return (
     <>
       <div className="flex flex-col text-center w-full mb-10 " id="contact ">
-        <h1 className="text-3xl lg:text-5xl font-medium title-font mb-4 text-slate-600 mt-8 underline  Crimson">
-          <i class="bx bxs-contact d-flex align-middle me-3"></i> Contact US
+        <h1 className="text-3xl lg:text-5xl font-medium title-font mb-4 text-amber-600 mt-8 underline  Crimson">
+          <i class="bx bxs-contact d-flex align-middle me-3 text-emerald-800 "></i>{" "}
+          Contact US
         </h1>
       </div>
+
       <section className="text-gray-600 body-font relative">
         <div className="absolute inset-0 bg-gray-300">
           <iframe
