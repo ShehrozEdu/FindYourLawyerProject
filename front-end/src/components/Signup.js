@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 
-import { registerUserAction } from "../redux/slices/userSlice";
+// import { registerUserAction } from "../redux/slices/userSlice";
 import Footer from "./Home/Footer";
 
 //FormSchema
@@ -17,7 +17,7 @@ const formSchema = Yup.object({
   // ContactNo: Yup.number().required("Number is required").positive().integer(),
 });
 export default function Signup() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
       FirstName: "",
@@ -27,21 +27,21 @@ export default function Signup() {
       // ContactNo: "",
     },
     onSubmit: (values) => {
-      //dispath the action
-      dispatch(registerUserAction(values));
+      //dispatch the action
+      // dispatch(registerUserAction(values));
       console.log(values);
     },
     validationSchema: formSchema,
   });
   //State collection from Store
-  const storeData = useSelector((store) => store?.users);
-  const { serverErr, appErr, registered } = storeData;
-  console.log(storeData);
+  // const storeData = useSelector((store) => store?.users);
+  // const { serverErr, appErr, registered } = storeData;
+  // console.log(storeData);
 
   //Redirecting after Signup
-  if (registered) {
-    return <Navigate to="/bookings" />;
-  }
+  // if (registered) {
+  //   return <Navigate to="/bookings" />;
+  // }
   return (
     <>
       <div
@@ -53,11 +53,11 @@ export default function Signup() {
             <div className="mt-12 flex flex-col items-center">
               <h1 className="text-3xl xl:text-4xl font-extrabold text-amber-600 underline  Crimson">
                 Sign upto begin
-                {appErr || serverErr ? (
+                {/* {appErr || serverErr ? (
                   <div className="text-red-300 text-center">
                     {(serverErr, appErr)}
                   </div>
-                ) : null}
+                ) : null} */}
               </h1>
               <div className="w-full flex-1 mt-8">
                 <div className="flex flex-col items-center">
@@ -84,7 +84,7 @@ export default function Signup() {
                     </div>
                     <span className="ml-4">Sign Up with Google</span>
                   </button>
-                  <button className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5">
+                  {/* <button className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5">
                     <svg
                       className="w-6 h-6 text-blue-600 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ export default function Signup() {
                     </svg>
 
                     <span className="ml-4">Sign Up with Facebook</span>
-                  </button>
+                  </button> */}
                 </div>
 
                 <div className="my-12 border-b text-center">
