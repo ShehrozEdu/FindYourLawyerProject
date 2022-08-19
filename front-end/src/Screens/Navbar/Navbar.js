@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 export default function Navbar() {
   const state = useSelector((state) => state.users);
-  console.log(state);
+  // console.log(state);
   const { userAuth } = state;
   const isLawyer = userAuth?.result?.isLawyer;
 

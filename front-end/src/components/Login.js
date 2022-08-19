@@ -122,7 +122,7 @@ const Login = () => {
                 Don't have an account ?{" "}
                 <Link
                   to="/signup"
-                  className="cursor-pointer text-amber-600 hover:text-amber-800"
+                  className="cursor-pointer text-amber-600 hover:text-amber-600"
                 >
                   Sign up
                 </Link>

@@ -1,6 +1,7 @@
 const articles = [
   {
-    name: "Amulya Bhatia",
+    name: "the+rome+statute",
+    author: "Amulya Bhatia",
     title: "The Rome Statute",
     thumbnail: "/img/blog1.png",
     content: [
@@ -25,7 +26,8 @@ const articles = [
     ],
   },
   {
-    name: "Sneha Mahawar",
+    name: "my+india+does+not",
+    author: "Sneha Mahawar",
     title:
       "Why India does not need a Uniform Civil Code against popular belief",
     thumbnail: "/img/blog2.jpg",
@@ -76,8 +78,8 @@ Similar to this, there are several discriminatory practices within the different
     ],
   },
   {
-    name: "Amay Bahri",
-
+    name: "analysis+of+the+supreme+court+decesion",
+    author: "Amay Bahri",
     title:
       "[The Viewpoint] Analysis of the Supreme Court's decision in Vidarbha Industries",
     thumbnail: "/img/blog3.jpg",
@@ -129,7 +131,8 @@ Similar to this, there are several discriminatory practices within the different
     ],
   },
   {
-    name: "Rukshad Davar",
+    name: "twitter+vs+musk",
+    author: "Rukshad Davar",
     title:
       "The Viewpoint: Twitter v. Musk dispute has highlighted the importance of efficient contracting",
     thumbnail: "/img/blog4.jpg",

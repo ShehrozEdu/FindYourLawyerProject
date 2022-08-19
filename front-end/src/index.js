@@ -14,7 +14,7 @@ root.render(
   <Provider store={store}>
     <ThemeProvider>
       <Background>
-        <div className="absolute right-0 top-0 mr-4 mt-4 md:mr-6 md:mt-6">
+        <div className="absolute lg:right-0 md:right-10 right-10 top-0 mr-4 mt-4 md:mr-6 md:mt-6">
           <Toggle />
         </div>
         <App />

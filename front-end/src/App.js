@@ -33,11 +33,11 @@ function App() {
           <Route path={"/bookings"} element={<Bookings />} />
           <Route path={"/books"} element={<Books />} />
           <Route path={"/bookyourlawyer"} element={<AddNewCategory />} />
-          <Route path={"/mybookings"} element={<LawyerRoute />}>
-            {/* <Route path={"/mybookings"} element={<MyBookings />} /> */}
-          </Route>
+          {/* <Route path={"/mybookings"} element={}/> */}
+          {/* <Route path={"/mybookings"} element={<MyBookings />} /> */}
+
           <Route path={"/posts"} element={<CreatePost />} />
-          <Route path={"/services/IPC&CRPC"} element={<IPC />} />
+          <Route path={"/services/ipc&crpcs"} element={<IPC />} />
           <Route path={"/lawyersList"} element={<LawyersList />} />
           {/* //blogs */}
           <Route path={"/blogs"} element={<Blog />} />

@@ -14,7 +14,7 @@ export default function LogoutNavBar() {
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <Link to="/">
-                <img src="img/logo.png" className="logo" alt="" />
+                <img src="/img/logo.png" className="logo" alt="" />
               </Link>
               <h2 className="ml-3 text-xl text-black dark:">
                 Find Your Lawyer

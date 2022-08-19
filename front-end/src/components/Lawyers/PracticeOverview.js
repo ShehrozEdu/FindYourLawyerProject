@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import ModalPop from "./ModalPop";
+// import ModalPop from "./ModalPop";
 function loadScript(src) {
   return new Promise((resolve) => {
     const script = document.createElement("script");
@@ -36,7 +36,7 @@ async function displayRazorpay() {
     key: "rzp_test_Gaer6wsOr2pz3k", // Enter the Key ID generated from the Dashboard
     amount: amount.toString(),
     currency: currency,
-    name: "Sheh",
+    name: "LawyerBookingConfirmation",
     description: "Test Transaction",
     // image: { logo },
     order_id: order_id,
@@ -57,7 +57,7 @@ async function displayRazorpay() {
     },
     prefill: {
       name: "Shehroz",
-      email: "example@example.com",
+      email: "findyourlawyer@null.com",
       contact: "9999999999",
     },
     notes: {
