@@ -19,12 +19,12 @@ export default function ServiceBox(props) {
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-5 md:mb-2 items-center text-center">
           <Link to="/services/ipc&crpcs">
             <h1 className="title-font sm:text-3xl text-4xl mb-4 font-bold text-rose-900 hex cursor-pointer ">
-              IPCs and CRPCs
+              IPC and CRPC
             </h1>
           </Link>
           <p className="mb-8 text-stone-600 text-2xl leading-relaxed Crimson dark:text-white">
             Read about the latest updates in the legal field and downloadable
-            IPC and CRC
+            IPC and CRPC
           </p>
         </div>
       </div>

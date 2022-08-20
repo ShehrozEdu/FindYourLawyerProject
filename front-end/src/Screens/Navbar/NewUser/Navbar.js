@@ -1,13 +1,135 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+import Swal from "sweetalert2";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { GoogleLogin } from "@react-oauth/google";
 // import setDarkMode from "../../../hooks/setDarkMode";
 // import logo from "../../../img/logo.png";
-
+const formSchema = Yup.object({
+  Email: Yup.string().required("Email is required"),
+  Password: Yup.string().required("Password is required"),
+});
 export default function NewUSerNavBar() {
   const [navbar, setNavbar] = useState(false);
+  let [showModal, setShowModal] = useState(false);
+  let navigate = useNavigate();
 
+  const formik = useFormik({
+    initialValues: {
+      Email: "",
+      Password: "",
+    },
+    onSubmit: (values) => {
+      //dispatch the action
+
+      // dispatch(loginUserAction(values));
+
+      console.log(values);
+    },
+    validationSchema: formSchema,
+  });
+  let goToLogin = () => {
+    navigate("/signin");
+  };
+  let [userLogin, setUserLogin] = useState(null);
+  let onSuccess = (response) => {
+    localStorage.setItem("auth_token", response.credential); //can be like token= response.cred..
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Login Successful!",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => window.location.reload());
+  };
+
+  let onError = () => {
+    alert("Login Failed");
+  };
+
+  let logout = () => {
+    localStorage.removeItem("auth_token");
+    window.location.reload();
+  };
+  useEffect(() => {
+    let token = localStorage.getItem("auth_token");
+    if (token) {
+      let decoded = jwt_decode(token);
+      setUserLogin(decoded);
+    } else {
+      setUserLogin(null);
+    }
+  }, []);
+  const inStyle = { background: "black" };
   return (
     <>
+      {showModal ? (
+        <>
+          <div className="justify-center practices-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-slate-300 dark:bg-gray-600">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl ">
+              {/*content*/}
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none dark:bg-gray-700">
+                {/* -------------------- */}
+                {/*header*/}
+                {/* ------------------------------------- */}
+                <div className="flex practices-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                  <h1
+                    className="text-center text-4xl text-amber-600 font-display font-semibold  xl:text-5xl
+                    xl:text-bold underline Crimson "
+                  >
+                    Sign in
+                  </h1>
+                </div>
+                {/*MODAL body*/}
+                <>
+                  <GoogleOAuthProvider clientId="263148022359-f2gtatcn7s3afukeqjf877ooee8rmgjg.apps.googleusercontent.com">
+                    <div className="lg:flex dark:bg-gray-800">
+                      <div className="lg:w-1/2 xl:max-w-screen-sm">
+                        <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12 dark:bg-gray-800"></div>
+                        <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl ">
+                          <div className="flex flex-col items-center mt-8 lg:mb-0 mb-24">
+                            <p className="Crimson text-2xl text-amber-600 mb-3">
+                              Login With Google
+                            </p>
+                            <GoogleLogin
+                              onSuccess={(credentialResponse) => {
+                                onSuccess(credentialResponse);
+                              }}
+                              onError={() => {
+                                onError();
+                              }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex-1 bg-gray-200 dark:bg-gray-800 text-center hidden lg:flex">
+                        <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat ">
+                          <img src="img/test.jpg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </GoogleOAuthProvider>
+                </>
+                {/*footer*/}
+                <div className="flex practices-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                  <button
+                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
       <nav className="w-full bg-white dark:bg-gray-900 shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
@@ -57,11 +179,28 @@ export default function NewUSerNavBar() {
             </div>
           </div>
           <div>
-            <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? "block" : "hidden"
-              }`}
-            >
+            {userLogin === null ? (
+              <div
+                className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                  navbar ? "block" : "hidden"
+                }`}
+              >
+                <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                  <li className="text-gray-700 dark:text-white  font-bold hover:text-amber-600 dark:hover:text-yellow-300 ">
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 ">
+                    <Link to="/bookings">Lawyer Booking</Link>
+                  </li>
+                  <li
+                    className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 cursor-pointer "
+                    onClick={() => setShowModal(true)}
+                  >
+                    Sign In
+                  </li>
+                </ul>
+              </div>
+            ) : (
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-gray-700 dark:text-white  font-bold hover:text-amber-600 dark:hover:text-yellow-300 ">
                   <Link to="/">Home</Link>
@@ -69,11 +208,14 @@ export default function NewUSerNavBar() {
                 <li className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 ">
                   <Link to="/bookings">Lawyer Booking</Link>
                 </li>
-                <li className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 ">
-                  <Link to="/signin">Sign In</Link>
+                <li
+                  className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 cursor-pointer "
+                  onClick={logout}
+                >
+                  Logout
                 </li>
               </ul>
-            </div>
+            )}
           </div>
         </div>
       </nav>

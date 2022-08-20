@@ -2,25 +2,25 @@ import React from "react";
 import LogoutNavBar from "./LogoutNav/Navbar";
 import NewUserNavBar from "./NewUser/Navbar";
 import LawyerNavbar from "./Lawyer/Navbar";
-import { useSelector } from "react-redux";
+
 // import SetDarkMode from "../../hooks/setDarkMode";
 
 export default function Navbar() {
-  const state = useSelector((state) => state.users);
+  // const state = useSelector((state) => state.users);
   // console.log(state);
-  const { userAuth } = state;
-  const isLawyer = userAuth?.result?.isLawyer;
+  // const { userAuth } = state;
+  // const isLawyer = userAuth?.result?.isLawyer;
 
   // console.log(isLawyer);
   return (
     <>
-      {isLawyer ? (
+      {/* {isLawyer ? (
         <LawyerNavbar />
       ) : userAuth ? (
         <LogoutNavBar />
-      ) : (
-        <NewUserNavBar />
-      )}
+      ) : ( */}
+      <NewUserNavBar />
+      {/* )} */}
     </>
   );
 }

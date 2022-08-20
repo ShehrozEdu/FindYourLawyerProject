@@ -88,7 +88,7 @@ export default function ContactUsForm() {
             <button
               type="sumbit"
               className="bg-gray-500 text-gray-100 p-4 w-full rounded-full tracking-wide
-                                font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-slate-600
+                                font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-amber-600
                                 shadow-lg"
             >
               Send

@@ -12,7 +12,7 @@ export default function IPC() {
           />
           <div class="text-center lg:w-2/3 w-full">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-              Download the IPCs and CRPCs to know more about LAW and Order
+              Download the IPC and CRPC to know more about LAW and Order
             </h1>
 
             <div class="flex justify-center">
@@ -21,14 +21,14 @@ export default function IPC() {
                 href="/IPCs.pdf"
                 download
               >
-                Download IPCs
+                Download IPC
               </a>
               <a
                 class="ml-4 inline-flex text-gray-700 bg-gray-400 border-0 py-2 px-6 focus:outline-none hover:bg-gray-500 rounded text-lg"
                 href="/CRPCs.pdf"
                 download
               >
-                Download CRPCs
+                Download CRPC
               </a>
             </div>
           </div>

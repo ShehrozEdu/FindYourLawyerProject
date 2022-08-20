@@ -3,8 +3,8 @@ import "./App.css";
 
 //Screens
 import HomeScreen from "./components/Home/HomeScreen";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+// import Login from "./components/Login";
+// import Signup from "./components/Signup";
 import Bookings from "./components/Bookings";
 import Books from "./components/Books";
 import Navbar from "./Screens/Navbar/Navbar";
@@ -17,7 +17,7 @@ import LawyersList from "./components/Lawyers/LawyersList";
 import Article from "./components/BlogCRUD/Article/Article";
 import Blog from "./components/BlogCRUD/Article/Blog";
 import Error from "./components/Error";
-import Pricing from "./components/Categories/Pricing";
+// import Pricing from "./components/Categories/Pricing";
 import PracticeOverview from "./components/Lawyers/PracticeOverview";
 
 function App() {
@@ -27,8 +27,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path={"/"} element={<HomeScreen />} />
-          <Route path={"/signin"} element={<Login />} />
-          <Route path={"/signup"} element={<Signup />} />
+          {/* <Route path={"/signin"} element={<Login />} /> */}
+          {/* <Route path={"/signup"} element={<Signup />} /> */}
           {/* <Route path={"/signup/lawyer"} element={<LawyerSignup />} /> */}
           <Route path={"/bookings"} element={<Bookings />} />
           <Route path={"/books"} element={<Books />} />

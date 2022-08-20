@@ -5,6 +5,7 @@ const ServicesController = require("../Controllers/ServicesController");
 const TestimonialsController = require("../Controllers/TestimonialsController");
 const PracticeController = require("../Controllers/PracticeController");
 const NewsController = require("../Controllers/NewsController");
+const TopLawyersListController = require("../Controllers/TopLawyersListController");
 const LawyersListController = require("../Controllers/LawyersListControllers");
 const ArticleController = require("../Controllers/ArticleController");
 
@@ -28,6 +29,13 @@ OtherRouters.get("/getpracticebyid/:id", PracticeController.getPracticeById);
 //News
 OtherRouters.post("/add-news", NewsController.addNews);
 OtherRouters.get("/news", NewsController.getNews);
+
+//TopLawyers
+OtherRouters.post(
+  "/add-topLawyers",
+  TopLawyersListController.addTopLawyersList
+);
+OtherRouters.get("/topLawyers", TopLawyersListController.getTopLawyersList);
 
 //LawyersList
 OtherRouters.post("/add-LawyersList", LawyersListController.addLawyersList);

@@ -5,11 +5,12 @@ export default function NewsExtra() {
     <>
       <section className="px-5  dark:bg-gray-800 dark:text-gray-100 py-6 ">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="text-3xl lg:text-5xl font-bold title-font mb-4  text-amber-800 underline  Crimson dark:text-amber-800">
+          <h1 className="text-3xl lg:text-5xl font-bold title-font mb-4  text-amber-600 underline  Crimson dark:text-amber-800">
             <i class="bx bx-news d-flex align-middle mr-3 "></i>Latest News
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base ">
-            Grab the top trending Legal News
+            Grab the top trending{" "}
+            <span className="text-amber-600"> Legal News</span>
           </p>
         </div>
         <div className="container grid grid-cols-12 mx-auto gap-y-6 md:gap-10">
@@ -18,7 +19,7 @@ export default function NewsExtra() {
               <div className="flex flex-col space-y-2">
                 <h3 className="flex items-center space-x-2 dark:text-gray-400">
                   <span className="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
-                  <span className="text-xs font-bold tracking-wider uppercase">
+                  <span className="text-xs font-bold tracking-wider uppercase text-amber-400">
                     Exclusive
                   </span>
                 </h3>
@@ -44,13 +45,14 @@ export default function NewsExtra() {
               <div className="flex flex-col space-y-2">
                 <h3 className="flex items-center space-x-2 dark:text-gray-400">
                   <span className="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
-                  <span className="text-xs font-bold tracking-wider uppercase">
+                  <span className="text-xs font-bold tracking-wider uppercase text-amber-400">
                     Exclusive
                   </span>
                 </h3>
                 <a
                   rel="noopener noreferrer"
                   href="https://www.thehindu.com/news/international/cardinal-ranjith-says-perpetrators-of-2019-easter-sunday-attacks-still-engaged-in-politics-employed-with-sri-lanka-police-forces/article65710056.ece"
+                  target="_blank"
                   className="font-serif hover:underline"
                 >
                   Perpetrators of 2019 Easter Sunday attacks still engaged in
@@ -70,17 +72,46 @@ export default function NewsExtra() {
               <div className="flex flex-col space-y-2">
                 <h3 className="flex items-center space-x-2 dark:text-gray-400">
                   <span className="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
-                  <span className="text-xs font-bold tracking-wider uppercase">
+                  <span className="text-xs font-bold tracking-wider uppercase text-amber-400">
                     Exclusive
                   </span>
                 </h3>
                 <a
                   rel="noopener noreferrer"
                   href="https://www.sentinelassam.com/national-news/trinamool-workers-worried-after-mamata-dumped-partha-says-bjp-605255"
+                  target="_blank"
                   className="font-serif hover:underline"
                 >
                   'Trinamool workers worried after Mamata dumped Partha' Says
                   BJP
+                </a>
+                <p className="text-xs dark:text-gray-400">
+                  4 hours ago by
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="hover:underline dark:text-violet-400"
+                  >
+                    &nbsp; Sriraman Balla
+                  </a>
+                </p>
+              </div>
+              <div className="flex flex-col space-y-2">
+                <h3 className="flex items-center space-x-2 dark:text-gray-400">
+                  <span className="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
+                  <span className="text-xs font-bold tracking-wider uppercase text-amber-400">
+                    Exclusive
+                  </span>
+                </h3>
+                <a
+                  rel="noopener noreferrer"
+                  href="https://www.sentinelassam.com/national-news/trinamool-workers-worried-after-mamata-dumped-partha-says-bjp-605255"
+                  target="_blank"
+                  className="font-serif hover:underline"
+                >
+                  People not following the right discourse can undo the justice
+                  done to safeguard interests of marginalised groups: Justice DY
+                  Chandrachud
                 </a>
                 <p className="text-xs dark:text-gray-400">
                   4 hours ago by
@@ -101,9 +132,10 @@ export default function NewsExtra() {
               <a
                 rel="noopener noreferrer"
                 href="https://www.feedspot.com/infiniterss.php?_src=feed_title&followfeedid=5130745&q=site:https%3A%2F%2Fwww.legalbites.in%2Ffeed%2F"
+                target="_blank"
                 className="flex items-center justify-between w-full"
               >
-                <span className="text-xs font-bold tracking-wider uppercase">
+                <span className="text-xs font-bold tracking-wider uppercase text-amber-400">
                   See more exclusives
                 </span>
                 <svg
@@ -133,11 +165,12 @@ export default function NewsExtra() {
               </span>
               <h1
                 rel="noopener noreferrer"
-                href="#"
+                href="https://www.livelaw.in/top-stories/supreme-court-dowry-death-section-304b-ipc-dowry-prohibition-act-rigorous-imprisonment-206901"
+                target="_blank"
                 className="font-serif text-2xl font-semibold group-hover:underline dark:text-gray-100"
               >
-                Morbi mattis justo est, ac consectetur dui eleifend vitae. Donec
-                venenatis?
+                Legislative Intent Of Incorporating IPC Section 304-B Was To
+                Curb The Menace Of Dowry Death With A Firm Hand: Supreme Court
               </h1>
             </a>
           </div>
@@ -145,7 +178,7 @@ export default function NewsExtra() {
             <div className="mb-8 space-x-5 border-b-2 border-opacity-10 dark:border-violet-400">
               <button
                 type="button"
-                className="pb-5 text-xs font-bold uppercase border-b-2 dark:border-violet-400"
+                className="pb-5 text-xs font-bold uppercase border-b-2 text-amber-500  dark:border-violet-400"
               >
                 Latest
               </button>
@@ -155,25 +188,20 @@ export default function NewsExtra() {
                 <img
                   alt=""
                   className="flex-shrink-0 w-20 h-20 mr-4 dark:bg-gray-500 "
-                  src="https://source.unsplash.com/random/244x324"
+                  src="/img/bhim.jpg"
                 />
                 <div className="flex flex-col flex-grow">
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                    href="https://www.indialegallive.com/top-news-of-the-day/news/bhima-koregaon-case-nia-court-varavara-rao/"
+                    target="_blank"
                     className="font-serif hover:underline"
                   >
-                    Aenean ac tristique lorem, ut mollis dui.
+                    Bhima Koregaon case: NIA court lays twelve bail conditions
+                    for Varavara Rao
                   </a>
                   <p className="mt-auto text-xs dark:text-gray-400">
                     5 minutes ago
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      className="block dark:text-blue-400 lg:ml-2 lg:inline hover:underline"
-                    >
-                      Politics
-                    </a>
                   </p>
                 </div>
               </div>
@@ -181,25 +209,20 @@ export default function NewsExtra() {
                 <img
                   alt=""
                   className="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
-                  src="https://source.unsplash.com/random/245x325"
+                  src="/img/court.jpg"
                 />
                 <div className="flex flex-col flex-grow">
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                    href="https://www.indialegallive.com/constitutional-law-news/courts-news/lawyers-extortion-prayagraj-cbi-inquiry/"
+                    target="_blank"
                     className="font-serif hover:underline"
                   >
-                    Nulla consectetur efficitur.
+                    Allahabad HC directs CBI inquiry into extortion of lawyers
+                    in Prayagraj
                   </a>
                   <p className="mt-auto text-xs dark:text-gray-400">
                     14 minutes ago
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      className="block dark:text-blue-400 lg:ml-2 lg:inline hover:underline"
-                    >
-                      Sports
-                    </a>
                   </p>
                 </div>
               </div>
@@ -207,25 +230,20 @@ export default function NewsExtra() {
                 <img
                   alt=""
                   className="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
-                  src="https://source.unsplash.com/random/246x326"
+                  src="/img/arvind.jpg"
                 />
                 <div className="flex flex-col flex-grow">
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                    href="https://www.indialegallive.com/constitutional-law-news/courts-news/delhi-rouse-avenue-court-arvind-kejriwal-manish-sisodia-defamation/"
+                    target="_blank"
                     className="font-serif hover:underline"
                   >
-                    Vitae semper augue purus tincidunt libero.
+                    Delhi court acquits Chief Minister Arvind Kejriwal, his
+                    deputy Manish Sisodia in 2013 defamation case
                   </a>
                   <p className="mt-auto text-xs dark:text-gray-400">
                     22 minutes ago
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      className="block dark:text-blue-400 lg:ml-2 lg:inline hover:underline"
-                    >
-                      World
-                    </a>
                   </p>
                 </div>
               </div>
@@ -233,25 +251,21 @@ export default function NewsExtra() {
                 <img
                   alt=""
                   className="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
-                  src="https://source.unsplash.com/random/247x327"
+                  src="/img/award.jpg"
                 />
                 <div className="flex flex-col flex-grow">
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                    href="https://www.indialegallive.com/top-story/intitutions-young-minds-vision-cji-ramana/"
+                    target="_blank"
                     className="font-serif hover:underline"
                   >
-                    Suspendisse potenti.
+                    Institutions should blend our historical baggage with a
+                    futuristic vision to equip young minds to transform society:
+                    CJI NV Ramana
                   </a>
                   <p className="mt-auto text-xs dark:text-gray-400">
                     37 minutes ago
-                    <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      className="block dark:text-blue-400 lg:ml-2 lg:inline hover:underline"
-                    >
-                      Business
-                    </a>
                   </p>
                 </div>
               </div>
