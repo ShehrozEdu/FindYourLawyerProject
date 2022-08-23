@@ -167,7 +167,7 @@ export default function NewsExtra() {
                 rel="noopener noreferrer"
                 href="https://www.livelaw.in/top-stories/supreme-court-dowry-death-section-304b-ipc-dowry-prohibition-act-rigorous-imprisonment-206901"
                 target="_blank"
-                className="font-serif text-2xl font-semibold group-hover:underline dark:text-gray-100"
+                className="font-serif text-2xl font-semibold group-hover:underline dark:text-gray-100 cursor-pointer"
               >
                 Legislative Intent Of Incorporating IPC Section 304-B Was To
                 Curb The Menace Of Dowry Death With A Firm Hand: Supreme Court

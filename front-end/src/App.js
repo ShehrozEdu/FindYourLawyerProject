@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Outlet,
+  Navigate,
+} from "react-router-dom";
 import "./App.css";
 
 //Screens
@@ -21,18 +27,25 @@ import Error from "./components/Error";
 import PracticeOverview from "./components/Lawyers/PracticeOverview";
 
 function App() {
+  // function PrivateOutlet() {
+  //   const auth = useAuth();
+  //   return auth ? <Outlet /> : <Navigate to="/login" />;
+  // }
   return (
     <Router>
       <>
         <Navbar />
         <Routes>
           <Route path={"/"} element={<HomeScreen />} />
+          {/* <Route path="/private-outlet" element={<PrivateOutlet />}>
+            <Route path="" element={<Private />} /> 
+          </Route> */}
           {/* <Route path={"/signin"} element={<Login />} /> */}
           {/* <Route path={"/signup"} element={<Signup />} /> */}
           {/* <Route path={"/signup/lawyer"} element={<LawyerSignup />} /> */}
           <Route path={"/bookings"} element={<Bookings />} />
           <Route path={"/books"} element={<Books />} />
-          <Route path={"/bookyourlawyer"} element={<AddNewCategory />} />
+          {/* <Route path={"/bookyourlawyer"} element={<AddNewCategory />} /> */}
           {/* <Route path={"/mybookings"} element={}/> */}
           {/* <Route path={"/mybookings"} element={<MyBookings />} /> */}
 

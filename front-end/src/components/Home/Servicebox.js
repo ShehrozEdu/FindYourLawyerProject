@@ -11,7 +11,7 @@ export default function ServiceBox(props) {
       <div className="container flex px-5 py-10 md:flex-row flex-col items-center bg-slate-200 dark:bg-gray-700">
         <div className="lg:max-w-lg lg:w-full md:w-1/3 w-5/4 lg:mr-16 mr-4">
           <img
-            className="object-cover object-center rounded"
+            className="object-cover object-center rounded mb-2"
             alt="hero"
             src="/img/IndianLaw.jpg"
           />
@@ -53,7 +53,7 @@ export default function ServiceBox(props) {
       <div className="container flex px-4 py-8 md:flex-row flex-col items-center mt-3 bg-slate-200 dark:bg-gray-700">
         <div className="lg:max-w-lg lg:w-full md:w-1/3 w-5/4 lg:mr-16 mr-4">
           <img
-            className="object-cover object-center rounded"
+            className="object-cover object-center rounded mb-2"
             alt="hero"
             src="/img/Books.jpg"
           />

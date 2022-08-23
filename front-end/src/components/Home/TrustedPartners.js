@@ -15,7 +15,7 @@ export default function TrustedPartners() {
               <strong>we are proud to have their trust in us.</strong>
             </p>
           </div>
-          <div className="flex flex-wrap -m-4 ">
+          <div className="flex flex-wrap -m-4 dark:bg-gray-600 ">
             <div
               className="p-4 lg:w-1/4 md:w-1/2 .
             02`"
