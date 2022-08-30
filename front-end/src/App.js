@@ -27,10 +27,7 @@ import Error from "./components/Error";
 import PracticeOverview from "./components/Lawyers/PracticeOverview";
 
 function App() {
-  // function PrivateOutlet() {
-  //   const auth = useAuth();
-  //   return auth ? <Outlet /> : <Navigate to="/login" />;
-  // }
+  
   return (
     <Router>
       <>

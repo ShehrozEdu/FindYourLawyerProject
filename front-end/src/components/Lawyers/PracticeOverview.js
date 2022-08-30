@@ -31,6 +31,7 @@ async function displayRazorpay() {
   }
 
   const { amount, id: order_id, currency } = result.data;
+  console.log(result.data)
 
   const options = {
     key: "rzp_test_Gaer6wsOr2pz3k", // Enter the Key ID generated from the Dashboard

@@ -17,7 +17,7 @@ OtherRouters.get("/books", BooksController.getBooks);
 OtherRouters.post("/add-services", ServicesController.addServices);
 OtherRouters.get("/services", ServicesController.getServices);
 
-//Testimonials
+//Testimonial
 OtherRouters.post("/add-testimonials", TestimonialsController.addTestimonials);
 OtherRouters.get("/testimonials", TestimonialsController.getTestimonials);
 

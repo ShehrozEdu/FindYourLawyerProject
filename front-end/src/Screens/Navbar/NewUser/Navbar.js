@@ -3,37 +3,37 @@ import { Link, useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import { useFormik } from "formik";
-import * as Yup from "yup";
+// import { useFormik } from "formik";
+// import * as Yup from "yup";
 import { GoogleLogin } from "@react-oauth/google";
 // import setDarkMode from "../../../hooks/setDarkMode";
 // import logo from "../../../img/logo.png";
-const formSchema = Yup.object({
-  Email: Yup.string().required("Email is required"),
-  Password: Yup.string().required("Password is required"),
-});
+// const formSchema = Yup.object({
+//   Email: Yup.string().required("Email is required"),
+//   Password: Yup.string().required("Password is required"),
+// });
 export default function NewUSerNavBar() {
   const [navbar, setNavbar] = useState(false);
   let [showModal, setShowModal] = useState(false);
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
-  const formik = useFormik({
-    initialValues: {
-      Email: "",
-      Password: "",
-    },
-    onSubmit: (values) => {
-      //dispatch the action
+  // const formik = useFormik({
+  //   initialValues: {
+  //     Email: "",
+  //     Password: "",
+  //   },
+  //   onSubmit: (values) => {
+  //     //dispatch the action
 
-      // dispatch(loginUserAction(values));
+  //     // dispatch(loginUserAction(values));
 
-      console.log(values);
-    },
-    validationSchema: formSchema,
-  });
-  let goToLogin = () => {
-    navigate("/signin");
-  };
+  //     console.log(values);
+  //   },
+  //   validationSchema: formSchema,
+  // });
+  // let goToLogin = () => {
+  //   navigate("/signin");
+  // };
   let [userLogin, setUserLogin] = useState(null);
   let onSuccess = (response) => {
     localStorage.setItem("auth_token", response.credential); //can be like token= response.cred..
@@ -201,20 +201,26 @@ export default function NewUSerNavBar() {
                 </ul>
               </div>
             ) : (
-              <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-gray-700 dark:text-white  font-bold hover:text-amber-600 dark:hover:text-yellow-300 ">
-                  <Link to="/">Home</Link>
-                </li>
-                <li className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 ">
-                  <Link to="/bookings">Lawyer Booking</Link>
-                </li>
-                <li
-                  className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 cursor-pointer "
-                  onClick={logout}
-                >
-                  Logout
-                </li>
-              </ul>
+              <div
+                className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                  navbar ? "block" : "hidden"
+                }`}
+              >
+                <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                  <li className="text-gray-700 dark:text-white  font-bold hover:text-amber-600 dark:hover:text-yellow-300 ">
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 ">
+                    <Link to="/bookings">Lawyer Booking</Link>
+                  </li>
+                  <li
+                    className="text-gray-700 dark:text-white font-medium hover:text-amber-600 dark:hover:text-yellow-300 cursor-pointer "
+                    onClick={logout}
+                  >
+                    Logout
+                  </li>
+                </ul>
+              </div>
             )}
           </div>
         </div>
