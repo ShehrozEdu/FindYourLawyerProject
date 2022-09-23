@@ -6,7 +6,6 @@ const expressAsyncHandler = require("express-async-handler");
 const UserController = {
   signup: expressAsyncHandler(async (req, res) => {
     let data = req.body;
-
     let pass = data.Password;
     let saltRounds = 10;
     try {

@@ -8,6 +8,7 @@ const NewsController = require("../Controllers/NewsController");
 const TopLawyersListController = require("../Controllers/TopLawyersListController");
 const LawyersListController = require("../Controllers/LawyersListControllers");
 const ArticleController = require("../Controllers/ArticleController");
+const PaymentController = require("../Controllers/PaymentController");
 
 //Books
 OtherRouters.post("/add-books", BooksController.addBooks);
@@ -46,5 +47,7 @@ OtherRouters.post("/add-blogs", ArticleController.addArticle);
 OtherRouters.get("/blogs", ArticleController.getArticle);
 
 //CONTact
+OtherRouters.post("/payment", PaymentController.payment); // react
+OtherRouters.post("/callback", PaymentController.callback); // react
 
 module.exports = OtherRouters;

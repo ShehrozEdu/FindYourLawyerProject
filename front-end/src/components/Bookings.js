@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import { useParams } from "react-router-dom";
 import BookingsBox from "./BookingsBox";
-// import Pagination from "./Pagination/Pagination";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import LoadingSkeleton from "./utils/LoadingSkelton";
 
 export default function Bookings() {
   let [booking, setBooking] = useState([]);
-  let [pageObj, setPageObj] = useState({});
-  let [pageCount, setPageCount] = useState(0);
-
   let [sort, setSort] = useState("");
+  let [isLoading, setIsLoading] = useState(true);
 
   let BookingsData = async () => {
     let URL = "http://localhost:5000/api/practices";
     let response = await axios.get(URL);
     let { status, Practice } = response.data;
-    console.log(response.data);
+    // console.log(response.data);
 
     try {
       if (status) {
         setBooking([...Practice]);
-        // setPageCount(pageCount);
+        setIsLoading(false);
       } else {
         alert("Please Enter Valid Choice");
       }
@@ -28,19 +26,7 @@ export default function Bookings() {
       alert(error);
     }
   };
-  // let pagination = (event, option) => {
-  //   let { value } = event.target;
-  //   let _pageObj = {};
-  //   switch (option) {
-  //     case "page":
-  //       _pageObj["page"] = value;
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  //   setPageObj({ ...pageObj, ..._pageObj });
-  //   console.log(pageObj);
-  // };
+
   useEffect(() => {
     BookingsData();
   }, []);
@@ -90,28 +76,35 @@ export default function Bookings() {
           </div>
 
           {/* //Mapping */}
-          <div className="flex flex-wrap -m-4">
-            {booking
-              .filter((book) => {
-                if (sort === "") {
-                  return book;
-                } else if (
-                  book.title.toLowerCase().includes(sort.toLowerCase())
-                ) {
-                  return book;
-                }
-              })
-              .map((book) => {
-                return (
-                  <BookingsBox
-                    book={book}
-                    key={book._id}
-                    // lawyersList={lawyersList}
-                  />
-                );
-              })}
-          </div>
-          {/* <Pagination pagination={pagination} pageCount={pageCount} /> */}
+          {isLoading ? (
+            <div className="flex flex-wrap -m-4">
+              <LoadingSkeleton />
+            </div>
+          ) : (
+            <div className="flex flex-wrap -m-4">
+              {booking
+                .filter((book) => {
+                  if (sort === "") {
+                    return book;
+                  } else if (
+                    book.title.toLowerCase().includes(sort.toLowerCase())
+                  ) {
+                    return book;
+                  }
+                })
+                .map((book) => {
+                  return (
+                    <BookingsBox
+                      book={book}
+                      key={book._id}
+                      isLoading={isLoading}
+                      setIsLoading={setIsLoading}
+                      // lawyersList={lawyersList}
+                    />
+                  );
+                })}
+            </div>
+          )}
         </div>
       </section>
     </>

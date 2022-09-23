@@ -1,7 +1,6 @@
 import React from "react";
 
-export default function TestimonialBox(props) {
-  let { test } = props;
+export default function TestimonialBox({ test }) {
   return (
     <>
       <div className="lg:w-1/3 lg:mb-0 mb-6 p-4 bg-gray-100 dark:bg-gray-700  ">

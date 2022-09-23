@@ -22,7 +22,9 @@ function ArticleReuse({ articles }) {
             <p className="leading-relaxed text-base">
               {article.content[0].substring(0, 110)}....
             </p>
-            <p className="leading-relaxed text-base mt-2">By: {article.name}</p>
+            <p className="leading-relaxed text-base mt-2">
+              By: {article.author}
+            </p>
           </div>
         </div>
       ))}

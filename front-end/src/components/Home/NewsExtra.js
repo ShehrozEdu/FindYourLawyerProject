@@ -9,7 +9,7 @@ export default function NewsExtra() {
             <i class="bx bx-news d-flex align-middle mr-3 "></i>Latest News
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base ">
-            Grab the top trending{" "}
+            Grab the top trending
             <span className="text-amber-600"> Legal News</span>
           </p>
         </div>

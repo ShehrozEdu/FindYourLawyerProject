@@ -3,40 +3,20 @@ import { Link, useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-// import { useFormik } from "formik";
-// import * as Yup from "yup";
 import { GoogleLogin } from "@react-oauth/google";
-// import setDarkMode from "../../../hooks/setDarkMode";
-// import logo from "../../../img/logo.png";
-// const formSchema = Yup.object({
-//   Email: Yup.string().required("Email is required"),
-//   Password: Yup.string().required("Password is required"),
-// });
+
 export default function NewUSerNavBar() {
   const [navbar, setNavbar] = useState(false);
   let [showModal, setShowModal] = useState(false);
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
+  const navigateToSignup = () => {
+    setShowModal(false);
+    navigate("/signup");
+  };
 
-  // const formik = useFormik({
-  //   initialValues: {
-  //     Email: "",
-  //     Password: "",
-  //   },
-  //   onSubmit: (values) => {
-  //     //dispatch the action
-
-  //     // dispatch(loginUserAction(values));
-
-  //     console.log(values);
-  //   },
-  //   validationSchema: formSchema,
-  // });
-  // let goToLogin = () => {
-  //   navigate("/signin");
-  // };
   let [userLogin, setUserLogin] = useState(null);
   let onSuccess = (response) => {
-    localStorage.setItem("auth_token", response.credential); //can be like token= response.cred..
+    localStorage.setItem("auth_token2", response.credential); //can be like token= response.cred..
     Swal.fire({
       position: "center",
       icon: "success",
@@ -51,11 +31,11 @@ export default function NewUSerNavBar() {
   };
 
   let logout = () => {
-    localStorage.removeItem("auth_token");
+    localStorage.removeItem("auth_token2");
     window.location.reload();
   };
   useEffect(() => {
-    let token = localStorage.getItem("auth_token");
+    let token = localStorage.getItem("auth_token2");
     if (token) {
       let decoded = jwt_decode(token);
       setUserLogin(decoded);
@@ -63,7 +43,7 @@ export default function NewUSerNavBar() {
       setUserLogin(null);
     }
   }, []);
-  const inStyle = { background: "black" };
+
   return (
     <>
       {showModal ? (
@@ -87,14 +67,15 @@ export default function NewUSerNavBar() {
                 <>
                   <GoogleOAuthProvider clientId="263148022359-f2gtatcn7s3afukeqjf877ooee8rmgjg.apps.googleusercontent.com">
                     <div className="lg:flex dark:bg-gray-800">
-                      <div className="lg:w-1/2 xl:max-w-screen-sm">
+                      <div className="lg:w-full xl:max-w-screen-sm">
                         <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12 dark:bg-gray-800"></div>
-                        <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl ">
-                          <div className="flex flex-col items-center mt-8 lg:mb-0 mb-24">
+                        <div className="mt-2 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-1 xl:px-24 xl:max-w-2xl my-16 ">
+                          <div className="flex flex-col items-center mt-2 lg:mb-0 mb-18">
                             <p className="Crimson text-2xl text-amber-600 mb-3">
                               Login With Google
                             </p>
                             <GoogleLogin
+                              shape={"circle"}
                               onSuccess={(credentialResponse) => {
                                 onSuccess(credentialResponse);
                               }}
@@ -103,12 +84,6 @@ export default function NewUSerNavBar() {
                               }}
                             />
                           </div>
-                        </div>
-                      </div>
-
-                      <div className="flex-1 bg-gray-200 dark:bg-gray-800 text-center hidden lg:flex">
-                        <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat ">
-                          <img src="img/test.jpg" alt="" />
                         </div>
                       </div>
                     </div>
@@ -134,7 +109,7 @@ export default function NewUSerNavBar() {
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              <Link to="/">
+              <Link to="/" style={{ margin: 0 }}>
                 <img src="/img/logo.png" className="logo " alt="" />
               </Link>
               <h2 className="ml-3 text-xl text-black dark:text-white">

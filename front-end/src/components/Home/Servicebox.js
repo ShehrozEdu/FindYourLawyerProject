@@ -1,11 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function ServiceBox(props) {
-  // let NavigateLink = () => {
-  //   let Navigate = useNavigate();
-  //   Navigate("/books");
-  // };
-  // let { service } = props;
+export default function ServiceBox() {
   return (
     <>
       <div className="container flex px-5 py-10 md:flex-row flex-col items-center bg-slate-200 dark:bg-gray-700">

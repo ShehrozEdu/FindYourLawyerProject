@@ -1,12 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import LoadingSkelton from "./utils/LoadingSkelton";
 // import Pagination from "./Pagination/Pagination";
 
-export default function BookingsBox({ book }) {
-  //navigateToPractice
+export default function BookingsBox({ book, isLoading }) {
   const navigate = useNavigate();
   const getPracticeOverview = (id) => {
-    // console.log(id);
     navigate("/lawyerListOverview/" + id);
   };
 
